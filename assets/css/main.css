@@ -100,7 +100,7 @@ input, select, textarea {
 	body, input, textarea, select {
 		font-family: 'Source Sans Pro', sans-serif;
 		font-weight: 400;
-		color: #919499;
+		color: #313438;
 		font-size: 14pt;
 		line-height: 1.75em;
 		letter-spacing: 0.025em;
@@ -1453,14 +1453,14 @@ input, select, textarea {
 
 	header.style1 {
 		text-align: center;
-		padding: 3em 0 3em 0;
+		padding: 3em 0 0 0;
 	}
 
 		header.style1 h2 {
 			font-weight: 700;
 			font-size: 2em;
 			letter-spacing: 0.075em;
-			line-height: 1.5em;
+			line-height: 1em;
 		}
 
 		header.style1 p {
@@ -1469,7 +1469,7 @@ input, select, textarea {
 			margin: 1.15em 0 0 0;
 			font-size: 1.3em;
 			letter-spacing: 0.075em;
-			line-height: 1.5em;
+			line-height: 1em;
 		}
 
 /* Table */
@@ -1593,6 +1593,7 @@ input, select, textarea {
 		.image img {
 			display: block;
 			width: 100%;
+  			height: auto;
 		}
 
 		.image.fit {
@@ -2099,7 +2100,7 @@ input, select, textarea {
 
 		#logo p {
 			color: #eee;
-			color: rgba(255, 255, 255, 0.5);
+			color: rgba(255, 255, 255, 0.8);
 			text-transform: uppercase;
 			margin: 1.25em 0 0 0;
 			display: block;
@@ -2121,7 +2122,7 @@ input, select, textarea {
 		#nav > ul {
 			display: inline-block;
 			border-radius: 0.35em;
-			box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.25);
+			box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.75);
 			padding: 0 1.5em 0 1.5em;
 		}
 
@@ -2138,7 +2139,7 @@ input, select, textarea {
 				#nav > ul > li > a, #nav > ul > li > span {
 					display: block;
 					color: #eee;
-					color: rgba(255, 255, 255, 0.75);
+					color: rgba(255, 255, 255, 0.8);
 					text-transform: uppercase;
 					text-decoration: none;
 					font-size: 0.7em;
@@ -2166,7 +2167,7 @@ input, select, textarea {
 		background-color: rgba(44, 50, 63, 0.925);
 		padding: 1.25em 1em 1.25em 1em;
 		border-radius: 0.35em;
-		box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.25);
+		box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.5);
 		min-width: 12em;
 		text-align: left;
 		margin-top: -1.25em;
@@ -2753,7 +2754,7 @@ input, select, textarea {
 
 			body, input, select, textarea {
 				line-height: 1.5em;
-				font-size: 10.5pt;
+				font-size: 12pt;
 				letter-spacing: 0;
 			}
 
