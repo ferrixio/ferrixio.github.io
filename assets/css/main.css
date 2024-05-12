@@ -2393,7 +2393,7 @@ input, select, textarea {
 				margin-left: 1em;
 				padding-left: 1em;
 				border-left: solid 1px #333;
-				border-left-color: rgba(255, 255, 255, 0.05);
+				border-left-color: rgba(255, 255, 255);
 			}
 
 				#copyright ul li:first-child {
