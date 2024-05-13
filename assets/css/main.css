@@ -2005,13 +2005,13 @@ input, select, textarea {
 			}
 
 		.wrapper.style1 {
-			background: #e97770 url("images/overlay.png");
+			background: #448ae3 url("images/overlay.png");
 			color: #eee;
-			color: rgba(255, 255, 255, 0.75);
+			color: rgba(255, 255, 255, 0.9);
 		}
 
 			.wrapper.style1 .title {
-				background: #e97770 url("images/overlay.png");
+				background: #448ae3 url("images/overlay.png");
 				color: #fff;
 			}
 
@@ -2098,13 +2098,14 @@ input, select, textarea {
 			color: #fff;
 			font-size: 2em;
 			letter-spacing: 0.25em;
+			margin-bottom: 2em;
 		}
 
 		#logo p {
 			color: #eee;
 			color: rgba(255, 255, 255, 0.9);
 			text-transform: uppercase;
-			margin: 1.25em 0 0 0;
+			margin: 1.5em 0 0 0;
 			display: block;
 			letter-spacing: 0.2em;
 			font-size: 0.9em;
@@ -2325,6 +2326,8 @@ input, select, textarea {
 	#copyright {
 		text-align: center;
 		vertical-align: center;
+		background: #282b34 url("images/overlay.png");
+		padding-top: 2em;
 	}
 
 		#copyright ul {
