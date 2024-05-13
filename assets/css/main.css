@@ -1465,15 +1465,13 @@ input, select, textarea {
 		}
 
 		header.style1 p {
-			color: #b1b4b9;
+			color: #cdcdcd;
 			display: block;
 			margin: 1.15em 0 0 0;
 			font-size: 1.3em;
 			letter-spacing: 0.075em;
 			line-height: 1em;
 		}
-
-	
 
 /* Table */
 
@@ -2104,7 +2102,7 @@ input, select, textarea {
 
 		#logo p {
 			color: #eee;
-			color: rgba(255, 255, 255, 0.8);
+			color: rgba(255, 255, 255, 0.9);
 			text-transform: uppercase;
 			margin: 1.25em 0 0 0;
 			display: block;
@@ -2415,6 +2413,10 @@ input, select, textarea {
 
 				#logo h1 {
 					font-size: 1.75em;
+				}
+
+				#logo p {
+					margin: 1.25em 0 0 0;
 				}
 
 		/* Intro */
@@ -2832,8 +2834,8 @@ input, select, textarea {
 
 			#logo {
 				text-align: center;
-				padding-left: 2em;
-				padding-right: 2em;
+				padding-left: 6em;
+				padding-right: 6em;
 			}
 
 				#logo h1 {
