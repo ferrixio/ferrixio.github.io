@@ -2836,8 +2836,8 @@ input, select, textarea {
 
 			#logo {
 				text-align: center;
-				padding-left: 1em;
-				padding-right: 1em;
+				padding-left: 0em;
+				padding-right: 0em;
 			}
 
 				#logo h1 {
@@ -2846,7 +2846,7 @@ input, select, textarea {
 				}
 
 				#logo p {
-					margin: 1.25em 0 0 0;
+					margin: 0 0 0 0;
 					display: block;
 					letter-spacing: 0.2em;
 					font-size: 0.9em;
