@@ -1453,7 +1453,7 @@ input, select, textarea {
 
 	header.style1 {
 		text-align: center;
-		padding: 3em 0 0 0;
+		padding: 8em 0 0 0;
 	}
 
 		header.style1 h2 {
@@ -1626,6 +1626,11 @@ input, select, textarea {
 
 /* Button */
 
+	.button i {
+		margin-left: auto;
+		display: flex;
+	}
+
 	input[type="button"],
 	input[type="submit"],
 	input[type="reset"],
@@ -1635,22 +1640,20 @@ input, select, textarea {
 		-webkit-transition: all .25s ease-in-out;
 		-ms-transition: all .25s ease-in-out;
 		transition: all .25s ease-in-out;
-		display: inline-block;
-		background: #444;
-		text-align: center;
-		text-transform: uppercase;
+		display: inline-flex;
+		align-items: center;
+		justify-content: space-between;
 		font-weight: 700;
-		letter-spacing: 0.25em;
+		letter-spacing: 0.1rem;
 		text-decoration: none;
-		border-radius: 0.35em;
-		border: 0;
-		outline: 0;
+		border-radius: 1.25rem;
 		cursor: pointer;
 		padding: 0 2.25em 0 2.25em;
-		font-size: 0.9em;
-		min-width: 12em;
-		height: 4em;
-		line-height: 4em;
+		font-size: 1em;
+		min-width: 10em;
+		height: auto;
+		line-height: 3em;
+		box-shadow: 0.1rem 0.3rem 0rem 0rem rgba(5,5,5,0.5);
 	}
 
 		input[type="button"]:hover,
@@ -1667,83 +1670,146 @@ input, select, textarea {
 		button.large,
 		.button.large {
 			font-size: 1em;
-			min-width: 14em;
+			min-width: 12em;
 		}
 
-		input[type="button"].style1,
-		input[type="submit"].style1,
-		input[type="reset"].style1,
-		button.style1,
-		.button.style1 {
-			background: #e97770 url("images/overlay.png");
+		input[type="button"].normal,
+		input[type="submit"].normal,
+		input[type="reset"].normal,
+		button.normal,
+		.button.normal {
+			background: hsl(25, 90%, 60%) url("images/overlay.png");
 			color: #fff;
 		}
 
-			input[type="button"].style1:hover,
-			input[type="submit"].style1:hover,
-			input[type="reset"].style1:hover,
-			button.style1:hover,
-			.button.style1:hover {
-				background-color: #f98780;
+			input[type="button"].normal:hover,
+			input[type="submit"].normal:hover,
+			input[type="reset"].normal:hover,
+			button.normal:hover,
+			.button.normal:hover {
+				background-color: hsl(25, 90%, 60%);
 			}
 
-			input[type="button"].style1:active,
-			input[type="submit"].style1:active,
-			input[type="reset"].style1:active,
-			button.style1:active,
-			.button.style1:active {
-				background-color: #d96760;
+			input[type="button"].normal:active,
+			input[type="submit"].normal:active,
+			input[type="reset"].normal:active,
+			button.normal:active,
+			.button.normal:active {
+				background-color: hsl(25, 90%, 70%);
 			}
-
-		input[type="button"].style2,
-		input[type="submit"].style2,
-		input[type="reset"].style2,
-		button.style2,
-		.button.style2 {
-			background: none;
-			color: #606167;
-			box-shadow: inset 0px 0px 2px 0px #a0a1a7;
-		}
-
-			input[type="button"].style2:hover,
-			input[type="submit"].style2:hover,
-			input[type="reset"].style2:hover,
-			button.style2:hover,
-			.button.style2:hover {
-				box-shadow: inset 0px 0px 2px 0px #606167;
-			}
-
-			input[type="button"].style2:active,
-			input[type="submit"].style2:active,
-			input[type="reset"].style2:active,
-			button.style2:active,
-			.button.style2:active {
-				box-shadow: inset 0px 0px 2px 0px #202127;
-			}
-
-		input[type="button"].style3,
-		input[type="submit"].style3,
-		input[type="reset"].style3,
-		button.style3,
-		.button.style3 {
-			background: #2f333b url("images/overlay.png");
+			
+		input[type="button"].instagram,
+		input[type="submit"].instagram,
+		input[type="reset"].instagram,
+		button.instagram,
+		.button.instagram {
 			color: #fff;
+			background: hsl(324, 82%, 56%) url("images/overlay.png");
 		}
 
-			input[type="button"].style3:hover,
-			input[type="submit"].style3:hover,
-			input[type="reset"].style3:hover,
-			button.style3:hover,
-			.button.style3:hover {
-				background-color: #3f434b;
+			input[type="button"].instagram:hover,
+			input[type="submit"].instagram:hover,
+			input[type="reset"].instagram:hover,
+			button.instagram:hover,
+			.button.instagram:hover {
+				background-color: hsl(324, 82%, 76%);
 			}
 
-			input[type="button"].style3:active,
-			input[type="submit"].style3:active,
-			input[type="reset"].style3:active,
-			button.style3:active,
-			.button.style3:active {
-				background-color: #1f232b;
+			input[type="button"].instagram:active,
+			input[type="submit"].instagram:active,
+			input[type="reset"].instagram:active,
+			button.instagram:active,
+			.button.instagram:active {
+				background-color: hsl(324, 82%, 66%);
+			}
+
+		input[type="button"].instagram,
+		input[type="submit"].instagram,
+		input[type="reset"].instagram,
+		button.instagram,
+		.button.instagram {
+			background: hsl(324, 82%, 56%) url("images/overlay.png");
+			color: #FFE4C9;
+			background-image: linear-gradient(20deg, rgba(127, 111, 222, 0.6) 0%, rgba(255, 255, 255, 0.004) 100%);
+			background-position: 0% 0%;
+			background-repeat: repeat;
+			background-size: cover;
+		}
+
+			input[type="button"].instagram:hover,
+			input[type="submit"].instagram:hover,
+			input[type="reset"].instagram:hover,
+			button.instagram:hover,
+			.button.instagram:hover {
+				background-color: hsl(324, 82%, 76%);
+			}
+
+			input[type="button"].instagram:active,
+			input[type="submit"].instagram:active,
+			input[type="reset"].instagram:active,
+			button.instagram:active,
+			.button.instagram:active {
+				background-color: hsl(324, 82%, 66%);
+			}
+
+		input[type="button"].github,
+		input[type="submit"].github,
+		input[type="reset"].github,
+		button.github,
+		.button.github {
+			background: hsl(220, 10%, 20%) url("images/overlay.png");
+			color: #FFE4C9;
+			background-image: linear-gradient(20deg, rgba(150, 150, 150, 0.6) 0%, rgba(255, 255, 255, 0.004) 100%);
+			background-position: 0% 0%;
+			background-repeat: repeat;
+			background-size: cover;
+		}
+
+
+			input[type="button"].github:hover,
+			input[type="submit"].github:hover,
+			input[type="reset"].github:hover,
+			button.github:hover,
+			.button.github:hover {
+				background-color: hsl(220, 10%, 40%);
+			}
+
+			input[type="button"].github:active,
+			input[type="submit"].github:active,
+			input[type="reset"].github:active,
+			button.github:active,
+			.button.github:active {
+				background-color: hsl(220, 10%, 30%);
+			}
+
+		/**/
+		input[type="button"].bluesky,
+		input[type="submit"].bluesky,
+		input[type="reset"].bluesky,
+		button.bluesky,
+		.button.bluesky {
+			background: rgb(40, 107, 189) url("images/overlay.png");
+			color: #FFE4C9;
+			background-image: linear-gradient(20deg, rgba(30, 190, 240, 0.6) 0%, rgba(255, 255, 255, 0.004) 100%);
+			background-position: 0% 0%;
+			background-repeat: repeat;
+			background-size: cover;
+		}
+
+			input[type="button"].bluesky:hover,
+			input[type="submit"].bluesky:hover,
+			input[type="reset"].bluesky:hover,
+			button.bluesky:hover,
+			.button.bluesky:hover {
+				background-color: hsl(213, 65%, 65%);
+			}
+
+			input[type="button"].bluesky:active,
+			input[type="submit"].bluesky:active,
+			input[type="reset"].bluesky:active,
+			button.bluesky:active,
+			.button.bluesky:active {
+				background-color: hsl(213, 65%, 55%);
 			}
 
 /* List */
@@ -1882,6 +1948,7 @@ input, select, textarea {
 			font-size: 0.8em;
 		}
 
+
 /* Icons */
 
 	.icon {
@@ -1954,92 +2021,123 @@ input, select, textarea {
 		margin-left: 7em;
 	}
 
-/* Wrapper */
+/* Research Wrapper */
 
 	.wrapper {
 		position: relative;
-		padding: 6em 0 9em 0;
+		padding: 3em 0 5em 0;
 	}
 
-		.wrapper .title {
+	.wrapper .title {
+		position: absolute;
+		top: 0;
+		left: 50%;
+		text-align: center;
+		text-transform: uppercase;
+		display: block;
+		font-weight: 700;
+		letter-spacing: 0.25em;
+		font-size: 0.9em;
+		width: 25em;
+		height: 3.25em;
+		top: -3.25em;
+		line-height: 3.25em;
+		margin-bottom: -3.25em;
+		margin-left: -12.5em;
+		padding-top: 0.5em;
+	}
+
+		.wrapper .title:before {
+			content: '';
 			position: absolute;
-			top: 0;
-			left: 50%;
-			text-align: center;
-			text-transform: uppercase;
-			display: block;
-			font-weight: 700;
-			letter-spacing: 0.25em;
-			font-size: 0.9em;
-			width: 25em;
-			height: 3.25em;
-			top: -3.25em;
-			line-height: 3.25em;
-			margin-bottom: -3.25em;
-			margin-left: -12.5em;
-			padding-top: 0.5em;
+			bottom: -38px;
+			left: -35px;
+			width: 35px;
+			height: 38px;
+			background: url("images/shadow.png");
 		}
 
-			.wrapper .title:before {
-				content: '';
-				position: absolute;
-				bottom: -38px;
-				left: -35px;
-				width: 35px;
-				height: 38px;
-				background: url("images/shadow.png");
-			}
+		.wrapper .title:after {
+			-moz-transform: scaleX(-1);
+			-webkit-transform: scaleX(-1);
+			-ms-transform: scaleX(-1);
+			transform: scaleX(-1);
+			content: '';
+			position: absolute;
+			bottom: -38px;
+			right: -35px;
+			width: 35px;
+			height: 38px;
+			background: url("images/shadow.png");
+		}
 
-			.wrapper .title:after {
-				-moz-transform: scaleX(-1);
-				-webkit-transform: scaleX(-1);
-				-ms-transform: scaleX(-1);
-				transform: scaleX(-1);
-				content: '';
-				position: absolute;
-				bottom: -38px;
-				right: -35px;
-				width: 35px;
-				height: 38px;
-				background: url("images/shadow.png");
-			}
+	.wrapper.style1 {
+		background: #448ae3 url("images/overlay.png");
+		color: #eee;
+		color: rgba(255, 255, 255, 0.9);
+	}
 
-		.wrapper.style1 {
+		.wrapper.style1 .title {
+			background: #448ae3 url("images/overlay.png");
+			color: #fff;
+		}
+
+		.wrapper.style1 h1, .wrapper.style1 h2, .wrapper.style1 h3, .wrapper.style1 h4, .wrapper.style1 h5, .wrapper.style1 h6, .wrapper.style1 strong, .wrapper.style1 b, .wrapper.style1 a {
+			color: #fff;
+		}
+
+	.wrapper.style2 {
+		background: #fff;
+	}
+
+		.wrapper.style2 .title {
+			background: #fff;
+			color: #484d55;
+		}
+
+	.wrapper.style3 {
+		background: #f3f3f3 url("images/overlay.png");
+	}
+
+		.wrapper.style3 .title {
+			background: #f3f3f3 url("images/overlay.png");
+			color: #484d55;
+		}
+
+		.wrapper.style3 .image {
+			border: solid 10px #fff;
+		}
+
+/* Standard wrapper (no header) */
+	.std-wrapper {
+		position: relative;
+		padding: 2.5em 0 5em 0;
+	}
+
+		.std-wrapper.style1 {
 			background: #448ae3 url("images/overlay.png");
 			color: #eee;
 			color: rgba(255, 255, 255, 0.9);
 		}
 
-			.wrapper.style1 .title {
+			.std-wrapper.style1 .title {
 				background: #448ae3 url("images/overlay.png");
 				color: #fff;
 			}
 
-			.wrapper.style1 h1, .wrapper.style1 h2, .wrapper.style1 h3, .wrapper.style1 h4, .wrapper.style1 h5, .wrapper.style1 h6, .wrapper.style1 strong, .wrapper.style1 b, .wrapper.style1 a {
+			.std-wrapper.style1 h1, .std-wrapper.style1 h2, .std-wrapper.style1 h3, .std-wrapper.style1 h4, .std-wrapper.style1 h5, .std-wrapper.style1 h6, .std-wrapper.style1 strong, .std-wrapper.style1 b, .std-wrapper.style1 a {
 				color: #fff;
 			}
 
-		.wrapper.style2 {
+		.std-wrapper.style2 {
 			background: #fff;
 		}
 
-			.wrapper.style2 .title {
+			.std-wrapper.style2 .title {
 				background: #fff;
 				color: #484d55;
 			}
 
-		.wrapper.style3 {
-			background: #f3f3f3 url("images/overlay.png");
-		}
-
-			.wrapper.style3 .title {
-				background: #f3f3f3 url("images/overlay.png");
-				color: #484d55;
-			}
-
-			.wrapper.style3 .image {
-				border: solid 10px #fff;
-			}
 
 /* Page Wrapper */
 
@@ -2064,7 +2162,7 @@ input, select, textarea {
 		justify-content: center;
 		position: relative;
 		height: 24em;
-		background: url("images/rw.jpg") center center;
+		background: url("images/luganoNotte.jpg") center center;
 		background-size: cover;
 		padding: 0;
 	}
