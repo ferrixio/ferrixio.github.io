@@ -101,8 +101,8 @@ input, select, textarea {
 		font-family: 'Source Sans Pro', sans-serif;
 		font-weight: 400;
 		color: #313438;
-		font-size: 14pt;
-		line-height: 1.75em;
+		font-size: 12pt;
+		line-height: 1.5em;
 		letter-spacing: 0.025em;
 	}
 
@@ -170,7 +170,7 @@ input, select, textarea {
 		clear: both;
 	}
 
-	p, ul, ol, dl, table, blockquote, form {
+	p, h2, ul, ol, dl, table, blockquote, form {
 		margin-bottom: 2em;
 	}
 
@@ -1453,7 +1453,6 @@ input, select, textarea {
 
 	header.style1 {
 		text-align: center;
-		padding: 8em 0 0 0;
 	}
 
 		header.style1 h2 {
@@ -1461,7 +1460,6 @@ input, select, textarea {
 			font-size: 2em;
 			letter-spacing: 0.075em;
 			line-height: 1em;
-			margin-top: 2em;
 		}
 
 		header.style1 p {
@@ -1524,7 +1522,6 @@ input, select, textarea {
 		-webkit-transition: all .25s ease-in-out;
 		-ms-transition: all .25s ease-in-out;
 		transition: all .25s ease-in-out;
-		-webkit-appearance: none;
 		display: block;
 		border: 0;
 		background: #eee;
@@ -1650,36 +1647,23 @@ input, select, textarea {
 		cursor: pointer;
 		padding: 0 2.25em 0 2.25em;
 		font-size: 1em;
-		min-width: 10em;
+		min-width: 12em;
 		height: auto;
 		line-height: 3em;
 		box-shadow: 0.1rem 0.3rem 0rem 0rem rgba(5,5,5,0.5);
 	}
-
-		input[type="button"]:hover,
-		input[type="submit"]:hover,
-		input[type="reset"]:hover,
-		button:hover,
-		.button:hover {
-			background-color: #f98780;
-		}
-
-		input[type="button"].large,
-		input[type="submit"].large,
-		input[type="reset"].large,
-		button.large,
-		.button.large {
-			font-size: 1em;
-			min-width: 12em;
-		}
 
 		input[type="button"].normal,
 		input[type="submit"].normal,
 		input[type="reset"].normal,
 		button.normal,
 		.button.normal {
-			background: hsl(25, 90%, 60%) url("images/overlay.png");
-			color: #fff;
+			background: hsl(25, 90%, 55%) url("images/overlay.png");
+			color: #ffffff;
+			background-image: linear-gradient(20deg, rgba(250, 250, 20, 0.6) 0%, rgba(255, 255, 255, 0.004) 100%);
+			background-position: 0% 0%;
+			background-repeat: repeat;
+			background-size: cover;
 		}
 
 			input[type="button"].normal:hover,
@@ -1687,7 +1671,7 @@ input, select, textarea {
 			input[type="reset"].normal:hover,
 			button.normal:hover,
 			.button.normal:hover {
-				background-color: hsl(25, 90%, 60%);
+				background-color: hsl(25, 90%, 80%);
 			}
 
 			input[type="button"].normal:active,
@@ -1698,6 +1682,33 @@ input, select, textarea {
 				background-color: hsl(25, 90%, 70%);
 			}
 			
+			
+		input[type="button"].instagram,
+		input[type="submit"].instagram,
+		input[type="reset"].instagram,
+		button.instagram,
+		.button.instagram {
+			color: #fff;
+			background: hsl(324, 82%, 56%) url("images/overlay.png");
+		}
+
+			input[type="button"].instagram:hover,
+			input[type="submit"].instagram:hover,
+			input[type="reset"].instagram:hover,
+			button.instagram:hover,
+			.button.instagram:hover {
+				background-color: hsl(324, 82%, 76%);
+			}
+
+			input[type="button"].instagram:active,
+			input[type="submit"].instagram:active,
+			input[type="reset"].instagram:active,
+			button.instagram:active,
+			.button.instagram:active {
+				background-color: hsl(324, 82%, 66%);
+			}
+
+
 		input[type="button"].instagram,
 		input[type="submit"].instagram,
 		input[type="reset"].instagram,
@@ -1989,19 +2000,17 @@ input, select, textarea {
 /* Box */
 
 	.box header {
-		margin: 0 0 1.5em 0;
+		margin: 0 0 2em 0;
 	}
 
 		.box header.style1 {
 			position: relative;
-			margin: -0.5em 0 0 0;
-			padding-top: 0;
 		}
 
 	.box h2 {
-		margin: 0 0 0.75em 0;
 		font-size: 1.15em;
 		letter-spacing: 0.05em;
+		margin: 0;
 	}
 
 	.box h3 {
@@ -2030,21 +2039,21 @@ input, select, textarea {
 
 	.wrapper .title {
 		position: absolute;
-		top: 0;
-		left: 50%;
 		text-align: center;
 		text-transform: uppercase;
-		display: block;
 		font-weight: 700;
-		letter-spacing: 0.25em;
-		font-size: 0.9em;
-		width: 25em;
+		letter-spacing: 0.2em;
+		font-size: 1em;
+		width: auto;
 		height: 3.25em;
 		top: -3.25em;
 		line-height: 3.25em;
 		margin-bottom: -3.25em;
-		margin-left: -12.5em;
 		padding-top: 0.5em;
+		padding-left: 2em;
+		padding-right: 2em;
+		left: 50%;
+    	transform: translateX(-50%);
 	}
 
 		.wrapper .title:before {
@@ -2111,7 +2120,7 @@ input, select, textarea {
 /* Standard wrapper (no header) */
 	.std-wrapper {
 		position: relative;
-		padding: 2.5em 0 5em 0;
+		padding: 2.5em 4em 2.5em 4em;
 	}
 
 		.std-wrapper.style1 {
@@ -2188,6 +2197,8 @@ input, select, textarea {
 		text-align: center;
 		position: relative;
 		top: 1.5em;
+		padding-left: 2em;
+		padding-right: 2em;
 	}
 
 		#logo h1 {
@@ -2223,13 +2234,13 @@ input, select, textarea {
 			display: inline-block;
 			border-radius: 0.35em;
 			box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.75);
-			padding: 0 1.5em 0 1.5em;
+			padding: 0 1em 0 1em;
 		}
 
 			#nav > ul > li {
 				display: inline-block;
 				text-align: center;
-				padding: 0 1.5em 0 1.5em;
+				padding: 0 1em 0 1em;
 			}
 
 				#nav > ul > li > ul {
@@ -2265,7 +2276,7 @@ input, select, textarea {
 	.dropotron {
 		background: #222835 url("images/overlay.png");
 		background-color: rgba(44, 50, 63, 0.925);
-		padding: 1.25em 1em 1.25em 1em;
+		padding: 0.5em 1em 0.5em 1em;
 		border-radius: 0.35em;
 		box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.5);
 		min-width: 12em;
@@ -2463,12 +2474,6 @@ input, select, textarea {
 
 	@media screen and (max-width: 1680px) {
 
-		/* Basic */
-
-			body, input, textarea, select {
-				font-size: 12pt;
-			}
-
 		/* Footer */
 
 		#footer {
@@ -2494,8 +2499,6 @@ input, select, textarea {
 		/* Basic */
 
 			body, input, select, textarea {
-				font-size: 11pt;
-				line-height: 1.5em;
 				letter-spacing: 0.015em;
 			}
 
@@ -2509,6 +2512,8 @@ input, select, textarea {
 
 			#logo {
 				margin-top: -0.5em !important;
+				padding-left: 2em;
+				padding-right: 2em;
 			}
 
 				#logo h1 {
@@ -2801,13 +2806,10 @@ input, select, textarea {
 		/* Basic */
 
 			body, input, select, textarea {
-				line-height: 1.5em;
-				font-size: 12pt;
 				letter-spacing: 0;
 			}
 
 			h2, h3, h4, h5, h6 {
-				font-size: 1.2em;
 				letter-spacing: 0.05em;
 				margin: 0 0 1em 0;
 			}
@@ -2826,22 +2828,16 @@ input, select, textarea {
 				display: none;
 			}
 
-			header.style1 {
-				padding: 0 0 1em 0;
+			header.style1 h2 {
+				letter-spacing: 0.075em;
+				padding: 0;
+				margin: 0;
 			}
 
-				header.style1 h2 {
-					font-size: 1.5em;
-					letter-spacing: 0.075em;
-					line-height: 1.25em;
-				}
-
-				header.style1 p {
-					font-size: 1em;
-					letter-spacing: 0;
-					display: block;
-					margin: 0;
-				}
+			header.style1 p {
+				letter-spacing: 0;
+				display: block;
+			}
 
 		/* Actions */
 
@@ -2887,23 +2883,11 @@ input, select, textarea {
 			.wrapper {
 				padding: 3em 0 6em 0;
 			}
-
-				.wrapper .title {
-					font-size: 0.9em;
-					width: 18em;
-					height: 2.5em;
-					top: -2.5em;
-					line-height: 2.5em;
-					margin-bottom: -2.5em;
-					margin-left: -9em;
-					padding-top: 0.5em;
+				.wrapper .title:before, .wrapper .title:after {
+					height: 15px;
+					bottom: -15px;
+					background-size: 100% 100%;
 				}
-
-					.wrapper .title:before, .wrapper .title:after {
-						height: 15px;
-						bottom: -15px;
-						background-size: 100% 100%;
-					}
 
 		/* Header */
 
@@ -2919,8 +2903,8 @@ input, select, textarea {
 
 			#logo {
 				text-align: center;
-				padding-left: 0em;
-				padding-right: 0em;
+				padding-left: 2em;
+				padding-right: 2em;
 			}
 
 				#logo h1 {
@@ -2971,10 +2955,6 @@ input, select, textarea {
 			#content {
 				padding: 0 0 2em 0;
 			}
-
-				#content header.style1 {
-					padding-bottom: 2.5em;
-				}
 
 		/* Footer */
 
