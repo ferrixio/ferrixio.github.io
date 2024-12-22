@@ -190,30 +190,6 @@ input, select, textarea {
 
 		}
 
-		@media screen and (max-width: 1280px) {
-
-			.container {
-				width: calc(100% - 100px);
-			}
-
-		}
-
-		@media screen and (max-width: 980px) {
-
-			.container {
-				width: calc(100% - 100px);
-			}
-
-		}
-
-		@media screen and (max-width: 736px) {
-
-			.container {
-				width: calc(100% - 40px);
-			}
-
-		}
-
 /* Row */
 
 	.row {
@@ -2170,8 +2146,9 @@ input, select, textarea {
 		-ms-justify-content: center;
 		justify-content: center;
 		position: relative;
-		height: 24em;
-		background: url("images/luganoNotte.jpg") center center;
+		height: 30em;
+		background: url("images/luganoNotte.jpg");
+		background-position: 100% 70%;
 		background-size: cover;
 		padding: 0;
 	}
