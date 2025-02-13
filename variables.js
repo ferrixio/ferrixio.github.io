@@ -4,7 +4,8 @@ const copyright = `
     <div id="copyright">
         <ul>
             <li>&copy;Samuele Ferri</li>
-            <li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+            <li>Base design: <a href="http://html5up.net">HTML5 UP</a></li>
+            <li>Background: taken by me</li>
         </ul>
     </div>
 `;
