@@ -21,7 +21,7 @@
 
     // Function to handle navigation panel
     function handleNavPanel() {
-        if ($(window).width() <= 736) { // Check if screen width is 768px or smaller
+        if ($(window).width() <= 768) { // Check if screen width is 768px or smaller
             if (!$('#titleBar').length) { // Prevent duplication
                 $('<div id="titleBar">' +
                     '<a href="#navPanel" class="toggle"></a>' +
@@ -36,16 +36,7 @@
                     '</nav>' +
                 '</div>').appendTo($body);
 
-                // Temporarily disable animation for first load
-                if (!panelInitialized) {
-                    $navPanel.css({ 'transform': 'translateX(-100%)', 'transition': 'none' }); // Hide without animation
-                    setTimeout(() => { 
-                        $navPanel.css({ 'transition': '' }); // Re-enable animation after first render
-                    }, 50);
-                    panelInitialized = true; // Mark as initialized
-                }
-
-                // Initialize panel normally
+                // Initialize panel before applying styles
                 $navPanel.panel({
                     delay: 500,
                     hideOnClick: true,
@@ -56,6 +47,15 @@
                     target: $body,
                     visibleClass: 'navPanel-visible'
                 });
+
+                // Temporarily hide sidebar without animation
+                if (!panelInitialized) {
+                    $navPanel.css({ 'visibility': 'hidden' }); // Hide temporarily
+                    setTimeout(() => { 
+                        $navPanel.css({ 'visibility': 'visible' }); // Show it again
+                    }, 50);
+                    panelInitialized = true;
+                }
             }
         } else {
             // Remove nav panel if screen size is above threshold
