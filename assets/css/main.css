@@ -49,8 +49,8 @@ body {
 	}
 
 	a {
-		text-decoration: none;
-		color: #717479;	/*TODO: CAMBIA COLORE IN VIOLA*/
+		text-decoration: underline;
+		color: rgb(131, 40, 255);
 	}
 
 	strong, b {
@@ -95,6 +95,10 @@ body {
 		border-radius: 5px;
 	}
 
+	div.polaroid a {
+		text-decoration: none;
+	}
+
 	div.caption {
 		font-size: 16px;
 		font-weight: bold;
@@ -119,7 +123,7 @@ body {
 		align-items: center;
 		justify-content: center;
 		position: relative;
-		height: 30vw;
+		height: 40vw;
 		background: url("images/mandarini.jpg");
 		background-position: 100% 50%;
 		background-size: cover;
@@ -134,7 +138,7 @@ body {
 
 	article.post {
 		text-align: center;
-		padding: 1.5em;
+		padding: 1em 0 1em 0;
 	}
 
 		article.post h2 {
@@ -319,7 +323,6 @@ body {
 
 	.copyright a {
 		color: inherit;
-		text-decoration: underline;
 	}
 
 		.copyright a:hover {
@@ -450,30 +453,27 @@ body {
 
 /* Box for program stuff */
 .box {
-	max-width: 25em;
-	min-width: 25em;
-	height: auto;
-    padding: 10px 0 10px 0;
+	width: 35%; /* You can keep this, but consider setting max-width */
+    max-width: 100%; /* Prevents overflow */
+    height: auto;
+    padding: 10px 0;
     position: relative;
     align-items: center;
-	width: 35%;
 }
 
 	.box header h2 {
 		justify-content: center;
 		margin: 0;
 		font-size: 1.5em;
+		align-content: center;
 	}
 
 	.box header {
 		display: flex;
-		/* grid-template-columns: minmax(64px, auto); Image takes auto size, text fills remaining space */
-		width: 100%;
-		align-items: center;
 		justify-content: center;
-		overflow: hidden;
-		flex-wrap: nowrap;
+		flex-wrap: wrap; /* Allow items to wrap on smaller screens */
 		gap: 10px;
+		width: 100%;
 	}
 
 	header .icon {
@@ -486,6 +486,10 @@ body {
 		grid-template-rows: auto auto; /* Image takes auto size, text fills remaining space */
 		align-items: center;
 		justify-items: center;
+		width: 100%; /* Make sure it doesn’t exceed container */
+		max-width: 100%; /* Prevents horizontal overflow */
+		padding: 10px; /* Add padding to prevent content from touching edges */
+		box-sizing: border-box; /* Includes padding in width calculations */
 	}
 
 	.box section p {
@@ -537,10 +541,6 @@ ul.actions {
 
 			ul.style2 p {
 				margin: 0;
-			}
-
-			ul.style2 a {
-				text-decoration: underline;
 			}
 
 			ul.style2 h3 {
@@ -733,6 +733,14 @@ ul.actions {
 	#nav {
 		display: none;
 	}
+
+	.box {
+        width: 100%; /* Take full width on small screens */
+    }
+
+    .box header {
+        justify-content: flex-start; /* Optional: Adjust alignment for better readability */
+    }
 
 	#page-wrapper {
 		-moz-backface-visibility: hidden;
