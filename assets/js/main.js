@@ -21,7 +21,7 @@
 
     // Function to handle navigation panel
     function handleNavPanel() {
-        if ($(window).width() <= 768) { // Check if screen width is 768px or smaller
+        if ($(window).width() <= 736) { // Check if screen width is 768px or smaller
             if (!$('#titleBar').length) { // Prevent duplication
                 $('<div id="titleBar">' +
                     '<a href="#navPanel" class="toggle"></a>' +
@@ -66,7 +66,7 @@
     }
 
     // Run on page load
-    handleNavPanel();
+    handleNavPanel();   // BUG: a bit buggy but it works
 
     // Run on window resize
     $window.resize(handleNavPanel);

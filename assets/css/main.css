@@ -34,7 +34,7 @@ body {
 		transition: none !important;
 	}
 
-	body, input, textarea, select {
+	body, input, textarea, select, figcaption {
 		font-family: 'Source Sans Pro', sans-serif;
 		font-weight: 400;
 		color: #313438;
@@ -72,7 +72,8 @@ body {
 /* Photography */
 	div.polaroid {
 		display: inline-block;
-		background: hsl(42, 75%, 90%);
+		/* background: hsl(42, 75%, 90%); */
+		background: hsl(0, 0%, 95%);
 		border: 1px solid rgba(0, 0, 0, 0.1);
 		border-radius: 5px;
 		box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
@@ -123,7 +124,7 @@ body {
 		align-items: center;
 		justify-content: center;
 		position: relative;
-		height: 40vw;
+		height: 30vw;
 		background: url("images/mandarini.jpg");
 		background-position: 100% 50%;
 		background-size: cover;
@@ -493,7 +494,7 @@ body {
 	}
 
 	.box section p {
-		margin: 1em 0 1em 0;
+		margin: 0 0 1em 0;
 	}
 
 
@@ -580,7 +581,7 @@ ul.actions {
 		height: auto;
 		line-height: 3em;
 		box-shadow: 0.1rem 0.3rem 0rem 0rem rgba(5,5,5,0.5);
-		color: rgba(255, 255, 255, 0.9);;
+		color: rgba(255, 255, 255);;
 	}
 
 		input[type="button"].normal,
@@ -698,16 +699,6 @@ ul.actions {
 			}
 
 @media screen and (max-width: 1080px){
-	.container {
-		margin: 0;
-		max-width: 100%;
-		display: flex;
-		box-sizing: border-box;
-		justify-content: center;
-		flex-wrap: wrap;
-		flex-direction: column;
-		align-items: center;
-	}
 
 	.container > .col-2{
 		width: 100%;
@@ -741,6 +732,11 @@ ul.actions {
     .box header {
         justify-content: flex-start; /* Optional: Adjust alignment for better readability */
     }
+
+	article.post p {
+		padding-left: 0;
+		padding-right: 0;
+	}
 
 	#page-wrapper {
 		-moz-backface-visibility: hidden;
