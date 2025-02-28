@@ -38,7 +38,7 @@
 
                 // Initialize panel before applying styles
                 $navPanel.panel({
-                    delay: 500,
+                    delay: 100,
                     hideOnClick: true,
                     hideOnSwipe: true,
                     resetScroll: true,
