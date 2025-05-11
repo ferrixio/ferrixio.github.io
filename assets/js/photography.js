@@ -1,7 +1,7 @@
 const folder = './assets/css/photo/';
 const container = document.getElementsByClassName('photo-container');
 
-fetch('https://ferrixio.github.io/main/assets/js/photo.json')
+fetch('https://ferrixio.github.io/assets/js/photo.json')
     .then(response => response.json())
     .then(images => {
         images.forEach(image => {
