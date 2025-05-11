@@ -1,0 +1,18 @@
+[
+    {"file": "vetro1.webp", "text": "Tainted glass 1", "date": "5/Apr/2025", "position": "50% 45%"},
+    {"file": "vetro2.webp", "text": "Tainted glass 2", "date": "5/Apr/2025", "position": "50% 45%"},
+    {"file": "vetro3.webp", "text": "Tainted glass 3", "date": "5/Apr/2025", "position": "50% 50%"},
+    {"file": "lupa.webp", "text": "Icon of Rome", "date": "5/Apr/2025", "position": "40% 0%"},
+    {"file": "barca-fontana.webp", "text": "Frozen fountain", "date": "5/Apr/2025", "position": "40% 0%"},
+    {"file": "glicine.webp", "text": "Wisteria", "date": "5/Apr/2025", "position": "40% 45%"},
+    {"file": "frozenWave.webp", "text": "Frozen wave", "date": "9/Mar/2025", "position": "40% 0%"},
+    {"file": "conchigliaSpuma.webp", "text": "Too many bubbles", "date": "9/Mar/2025", "position": "55% 0%"},
+    {"file": "fontana.webp", "text": "Wind-fountain", "date": "9/Mar/2025", "position": "0% 20%"},
+    {"file": "gattone.webp", "text": "Gattone", "date": "20/Feb/2025", "position": "0% 70%"},
+    {"file": "lordseagull.webp", "text": "Lord Seagull", "date": "15/Feb/2025", "position": "50%"},
+    {"file": "frozenGeyser.webp", "text": "Small geyser", "date": "15/Feb/2025", "position": "50%"},
+    {"file": "sunbathing.webp", "text": "Turtle", "date": "15/Feb/2025", "position": "50%"},
+    {"file": "mandarini.webp", "text": "tangerines in Villa Borghese", "date": "9/Feb/2025", "position": "55%"},
+    {"file": "crocus.webp", "text": "Sunny crocus", "date": "9/Feb/2025", "position": "50%"},
+    {"file": "luganoNotte.webp", "text": "Lugano by night", "date": "4/Dec/2024", "position": "0%"}
+]
