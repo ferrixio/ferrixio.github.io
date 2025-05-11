@@ -6,7 +6,7 @@ fetch('https://ferrixio.github.io/assets/js/photo.json')
     .then(images => {
         images.forEach(image => {
             // Create outer div with class 'polaroid'
-            const wrapper = document.createElement('div');
+            var wrapper = document.createElement('div');
             wrapper.className = 'polaroid';
 
             // Create <a> element
