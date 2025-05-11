@@ -1,5 +1,5 @@
 const imageFolder = './assets/css/photo/';
-const container = document.getElementsByClassName('photo-container');
+const container = document.getElementById('photo-container');
 
 fetch('https://ferrixio.github.io/assets/js/photo.json')
     .then(response => response.json())
