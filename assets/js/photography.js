@@ -1,5 +1,5 @@
 const imageFolder = './assets/css/photo/';
-const container = document.querySelector('photo-container');
+const container = document.getElementById('photo-container');
 
 fetch('https://ferrixio.github.io/assets/js/photo.json')
     .then(response => response.json())
@@ -17,7 +17,7 @@ fetch('https://ferrixio.github.io/assets/js/photo.json')
             // Create <img> element
             const img = document.createElement('img');
             img.src = imageFolder + image.file;
-            img.style.objectPosition = `${image.position}`; // Or set this dynamically if needed
+            img.style.objectPosition = `${image.position}`;
 
             // Create <figcaption> with two lines
             const caption = document.createElement('figcaption');
