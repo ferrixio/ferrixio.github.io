@@ -8,9 +8,11 @@
 */
 
 body {
-	line-height: 1;
 	margin: 0;
 	padding: 0;
+	height: inherit;
+	display: inherit;
+	flex-direction: inherit;
 }
 
 /* Basic */
@@ -21,6 +23,9 @@ body {
 
 	html {
 		box-sizing: border-box;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
 	}
 
 	body.is-preload *, body.is-preload *:before, body.is-preload *:after {
@@ -106,26 +111,17 @@ body {
 		color: #333;
 	}
 
-	div.polaroid:hover {
-		transform: scale(1.05);
-	}
-
 
 /* Header */
-	.header {
-		display: -moz-flex;
-		display: -ms-flex;
+	.pageheader {
 		display: flex;
-		-moz-align-items: center;
-		-ms-align-items: center;
-		-moz-justify-content: center;
-		-ms-justify-content: center;
+		flex-direction: column;
 		text-align: center;
 		align-items: center;
 		justify-content: center;
 		position: relative;
-		height: 30vw;
-		background: url("images/mandarini.jpg");
+		min-height: 40vh;
+		background: url("images/rosa.webp");
 		background-position: 100% 50%;
 		background-size: cover;
 		vertical-align: top;
@@ -134,12 +130,15 @@ body {
 
 /* Article */
 	article {
-		margin: 0 0 4em 0;
+		margin: 0;
 	}
 
 	article.post {
 		text-align: center;
 		padding: 1em 0 1em 0;
+		display: flex;
+		flex-direction: column;
+		flex: 1;
 	}
 
 		article.post h2 {
@@ -160,14 +159,25 @@ body {
 			padding-right: 10%;
 			font-size: large;
 		}
+
+	#leftSide {
+		min-width: 70%;
+	}
+
+	#rightSide {
+		min-width: 30%;
+	}
 	
 /* Logo = title */
 #logo {
 	width: 100%;
 	text-align: center;
 	top: 1.5em;
-	padding-left: 2em;
-	padding-right: 2em;
+	max-width: fit-content;
+	padding-left: 1%;
+	padding-right: 1%;
+	border-radius: 0.35em;
+	background-color: hsl(0, 0%, 20%, 0.75);
 }
 
 	#logo h1 {
@@ -182,7 +192,6 @@ body {
 		color: #eee;
 		color: rgba(255, 255, 255, 0.9);
 		text-transform: uppercase;
-		margin: 1.5em 0 0 0;
 		display: block;
 		letter-spacing: 0.2em;
 		font-size: 0.9em;
@@ -201,9 +210,10 @@ body {
 	#nav > ul {
 		display: inline-block;
 		border-radius: 0.35em;
-		box-shadow: inset 0px 0px 1px 1px rgba(255, 255, 255, 0.75);
+		box-shadow: inset 0px 0px 5px 1px rgba(255, 255, 255, 0.75);
 		padding: 0 1em 0 1em;
 		margin: 0;
+		backdrop-filter: blur(10px);
 	}
 
 		#nav > ul > li {
@@ -342,6 +352,9 @@ body {
 
 	#wrapperintro {
 		padding: 3em 0 5em 0;
+		display: flex;
+		flex-direction: column;
+		flex: 1;
 	}
 
 	.wrapper .title {
@@ -436,6 +449,7 @@ body {
     margin: 0;
     max-width: 100%;
 	display: flex;
+	flex-direction: row;
 	box-sizing: border-box;
 	justify-content: center;
 	flex-wrap: wrap;
@@ -443,16 +457,6 @@ body {
 	padding: 0;
 	align-items: flex-start;
 }
-
-.container > .col-8 {
-	width: 70%;
-}
-
-.container > .col-2 {
-	width: 30%;
-	align-self: flex-start;
-}
-
 
 /* Box for program stuff */
 .box {
@@ -702,27 +706,24 @@ ul.actions {
 				background-color: hsl(213, 65%, 55%);
 			}
 
-@media screen and (max-width: 1080px){
+@media screen and (min-width: 1080px){
 
-	.container > .col-2{
-		width: 100%;
-		margin-top: 1.5em;
+	.pageheader {
+		min-height: 60vh;
 	}
 
-	.container > .col-8{
-		width: 100%;
-	}
-
-	.header {
-		background-position: 70% 50%;
-	}
-
-	#introheader {
-		height: 20em;
+	#twoSides {
+		flex-direction: row;
 	}
 }
 
-@media screen and (max-width: 736px) {
+@media screen and (max-width: 1080px) and (orientation:landscape) {
+	.pageheader {
+		min-height: 60vh;
+	}
+}
+
+@media screen and (max-width: 1080px){
 
 	/* Nav */
 	#nav {
@@ -805,12 +806,12 @@ ul.actions {
 				line-height: 38px;
 				text-align: center;
 				color: rgba(255, 255, 255, 0.75);
-				background-color: rgba(92, 95, 103, 0.5);
+				background-color: hsla(224, 6%, 20%, 0.8);
 				border-radius: 0.25em;
 			}
 
 			#titleBar .toggle:active:before {
-				background-color: rgba(92, 95, 103, 0.75);
+				background-color: hsla(224, 6%, 20%, 0.8);
 			}
 
 	#navPanel {
