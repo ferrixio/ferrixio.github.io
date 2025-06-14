@@ -87,13 +87,13 @@ body {
 		transition: transform 0.3s ease-in-out;
 		width: 15vw; /* Dynamic width (% of viewpoint)*/
 		max-width: 15vw;
-		min-width: 175px;
+		min-width: 200px;
 		aspect-ratio: 1 / 1.2; /* Ensures space for the caption */
 		position: relative;
 		padding: 5px;
 	}
 
-	div.polaroid img {
+	div.polaroid canvas {
 		width: 100%;
 		aspect-ratio: 1 / 1; /* Ensures a square shape */
 		object-fit: cover; /* Keeps proportions and fills the square */
@@ -105,6 +105,7 @@ body {
 		text-decoration: none;
 	}
 
+	/* ehi, questo non cambia figcaption!!!*/
 	div.caption {
 		font-size: 16px;
 		font-weight: bold;
@@ -920,5 +921,16 @@ ul.actions {
 			ul.actions li:first-child {
 				margin-top: 0;
 			}
+
+	/* Photography */
+	div.polaroid {
+		display: inline-block;
+		min-width: 100px;
+	}
+
+	div.polaroid figcaption {
+		font-size: 10px;
+		color: #333;
+	}
 
 }
