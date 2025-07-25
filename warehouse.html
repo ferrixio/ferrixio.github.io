@@ -2,128 +2,91 @@
 <html>
 	<head>
 		<title>Warehouse</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<meta name="author" content="Samuele Ferri">
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
 	</head>
 	<body>
 		<!-- Header -->
-		<header class="pageheader">
-			<!-- Title -->
-			<div id="logo">
-				<h1>Warehouse</h1>
-			</div>
-
+		<header>
 			<!-- Nav -->
-			<nav id="nav">
-				<ul>
-					<li class="current"><a href="index.html">Home</a></li>
-					<li>
-						<a href="research.html">Research</a>
-						<ul>
-							<li><a href="research.html#articles">Articles</a></li>
-							<li><a href="research.html#conferences">Conferences</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="warehouse.html">Other</a>
-						<ul>
-							<li><a href="warehouse.html">Warehouse</a></li>
-							<li><a href="photoblog.html">Photo album</a></li>
-						</ul>
-					</li>
-					<li><a href="about.html">About me</a></li>
-				</ul>
+			<nav>
+				<!-- Mobile format -->
+				<details>
+					<summary>Warehouse</summary>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="research.html">Research</a></li>
+						<li><a href="warehouse.html">Warehouse</a></li>
+						<li><a href="photoblog.html">Photo album</a></li>
+						<li><a href="about.html">About me</a></li>
+					</ul>
+				</details>
+
+				<!-- Desktop format -->
+				<div id="nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="research.html">Research</a></li>
+						<li><a href="warehouse.html">Warehouse</a></li>
+						<li><a href="photoblog.html">Photo album</a></li>
+						<li><a href="about.html">About me</a></li>
+					</ul>
+				</div>
 			</nav>
 		</header>
 
-		<!-- Other -->
-		 <section class="wrapper articoli">
-			<article class="post" id="twoSides">
-				<div id="leftSide">
-					<header class="style1">
-						<h2>Ferrixio's suite</h2>
+		<article>
+			<h2>Ferrixio's suite</h2>
+			As a hobby I program softwares. Over the past few years I have built a couple of desktop applications for my own needs.
+			Since I created them following a personal "standard", I am unwittingly creating my own suite of softwares.
+			So I thought it would be a good idea to publish them here.
+
+			<div id="holder">
+				<div class="software">
+					<header>
+						<img class="icon" src="assets/css/images/PM_Icon.png"/>
+						<h3>Passwords Manager</h3>
 					</header>
-					<p>
-						As a hobby I program softwares. Over the past few years I have built a couple of desktop applications for my own needs.
-						Since I created them following a personal "standard", I am unwittingly creating my own suite of softwares.
-						So I thought it would be a good idea to publish them here.
-					</p>
-					<div class="container" style="gap: 1em; justify-content: center;">
-						<section class="box">
-							<header>
-								<img class="icon" src="assets/css/images/PM_Icon.png"/>
-								<h2>Passwords Manager</h2>
-							</header>
-							<section>
-								<p>Store your passwords offline on your computer with this useful tool.
-									Sensible data are encrypted with SHA256.</p>
-								<a href="Ferrixio suite/Passwords-Manager-1.4.zip" class="button normal" target="_blank">Download v1.4</a>
-							</section>
-						</section>
-
-						<section class="box">
-							<header>
-								<img class="icon" src="assets/css/images/DW_Icon.png"/>
-								<h2>Dice Works</h2>
-							</header>
-							<section>
-								<p>Want to roll dice on your pc? Use this application and roll every die you want!</p>
-								<a href="Ferrixio suite/Dice-Works-1.1.1.zip" class="button normal" target="_blank">Download v1.1.1</a>
-							</section>
-						</section>
-					</div>
+					Store your passwords offline on your computer with this useful tool. Sensible data are encrypted with SHA256.<br><br>
+					<a href="Ferrixio suite/Passwords-Manager-1.4.zip" class="button normal" target="_blank">Download v1.4</a>
 				</div>
 
-				<div id="rightSide">
-					<h2>RANDOM STUFF</h2>
-
-						<ul class="style2">
-							<li>
-								<h3>Too many quaternions!</h3>
-								<p>
-									I have created a library to perform quaternionic algebra in Python<br>
-									<a href="https://github.com/ferrixio/Quaternion-agc" target="_blank">Github repository</a>
-								</p>
-							</li>
-							<li>
-								<h3>B2B Converter</h3>
-								<p>Latex script to convert a .bib file in a .bbl<br>
-									<a href="https://github.com/ferrixio/B2BConverter" target="_blank">Github repository</a>
-								</p>
-							</li>
-							<li>
-								<h3>discord-DiceWorks</h3>
-								<p>Want a discord bot to roll dice during your online sessions?
-									<a href="https://discord.com/api/oauth2/authorize?client_id=862687316741193728&permissions=8&scope=bot" target="_blank">Click here!</a><br>
-									<a href="https://github.com/ferrixio/discord-DiceWorks" target="_blank">Github repository</a>
-								</p>
-							</li>
-							<li>
-								<h3>Character sheet for Dungeons and Dragons</h3>
-								<p>This is a useful character sheet for DnD 5e (italian only). <a href="Ferrixio suite/Scheda_dnd_5e_SFedit_v3-2.pdf" target="_blank">Get the pdf</a>
-								</p>
-							</li>
-						</ul>
+				<div class="software">
+					<header>
+						<img class="icon" src="assets/css/images/DW_Icon.png"/>
+						<h3>Dice Works</h3>
+					</header>
+					Want to roll dice on your pc? Use this application and roll every die you want!<br><br>
+					<a href="Ferrixio suite/Dice-Works-1.1.1.zip" class="button normal" target="_blank">Download v1.1.1</a>
 				</div>
+			</div>
 
-			</article>
-		 </section>
-
-        <!-- Copyright -->
-		<footer class="copyright">
-			<ul>
-				<li>Base design: <a href="http://html5up.net">HTML5 UP</a></li>
-				<li>Header: by me</li>
+			<h2>Random stuff</h2>
+			<ul class="random">
+				<li>
+					<h3>Too many quaternions!</h3>
+					I have created a library to perform quaternionic algebra in Python<br>
+					<a href="https://github.com/ferrixio/Quaternion-agc" target="_blank">Github repository</a>
+				</li>
+				<li>
+					<h3>B2B Converter</h3>
+					Latex script to convert a .bib file in a .bbl<br>
+					<a href="https://github.com/ferrixio/B2BConverter" target="_blank">Github repository</a>
+				</li>
+				<li>
+					<h3>discord-DiceWorks</h3>
+					Want a discord bot to roll dice during your online sessions?
+					<a href="https://discord.com/api/oauth2/authorize?client_id=862687316741193728&permissions=8&scope=bot" target="_blank">Click here!</a><br>
+					<a href="https://github.com/ferrixio/discord-DiceWorks" target="_blank">Github repository</a>
+				</li>
+				<li>
+					<h3>Character sheet for Dungeons and Dragons</h3>
+					This is a useful character sheet for DnD 5e (italian only). <a href="Ferrixio suite/Scheda_dnd_5e_SFedit_v3-2.pdf" target="_blank">Get the pdf</a>
+				</li>
 			</ul>
-		</footer>
-
-		<!-- Scripts -->
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.dropotron.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
+		</article>
 	</body>
 </html>
