@@ -1,73 +1,54 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Photography</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<title>Photo album</title>
+		<meta name="author" content="Samuele Ferri">
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<link rel="stylesheet" href="assets/css/main.css" />
+		<link rel="stylesheet" href="assets/css/fontawesome-all.min.css">
 	</head>
 	<body>
 		<!-- Header -->
-		<header class="pageheader">
-			<!-- Title -->
-			<div id="logo">
-				<h1>Photo album</h1>
-			</div>
-
+		<header>
 			<!-- Nav -->
-			<nav id="nav">
-				<ul>
-					<li class="current"><a href="index.html">Home</a></li>
-					<li>
-						<a href="research.html">Research</a>
-						<ul>
-							<li><a href="research.html#articles">Articles</a></li>
-							<li><a href="research.html#conferences">Conferences</a></li>
-						</ul>
-					</li>
-					<li>
-						<a href="warehouse.html">Other</a>
-						<ul>
-							<li><a href="warehouse.html">Warehouse</a></li>
-							<li><a href="photoblog.html">Photo album</a></li>
-						</ul>
-					</li>
-					<li><a href="about.html">About me</a></li>
-				</ul>
+			<nav>
+				<!-- Mobile format -->
+				<details>
+					<summary>Photo album</summary>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="research.html">Research</a></li>
+						<li><a href="warehouse.html">Warehouse</a></li>
+						<li><a href="photoblog.html">Photo album</a></li>
+						<li><a href="about.html">About me</a></li>
+					</ul>
+				</details>
+
+				<!-- Desktop format -->
+				<div id="nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="research.html">Research</a></li>
+						<li><a href="warehouse.html">Warehouse</a></li>
+						<li><a href="photoblog.html">Photo album</a></li>
+						<li><a href="about.html">About me</a></li>
+					</ul>
+				</div>
 			</nav>
 		</header>
 
-		<section class="wrapper articoli">
-			<article class="post">
-				<h2>Photography is the beauty of life captured - Tara Chisolm</h2>
+		<article style="text-align: center;">
+			<h2>Photography is the beauty of life captured - Tara Chisolm</h2>
 
-				<p style="text-align: center;">
-					This is a small collection of the photos I have taken. I hope you like them :).<br>
-					Click on the picture to view it in full screen.<br>
-					You can use them, but I ask you to at least quote me.
-				</p>
-				
-				<!-- Picture content -->
-				<div id="photo-container" style="text-align: center;"></div>
+			This is a small collection of the photos I have taken. I hope you like them :)<br>
+			Click on the picture to view it in full screen. You can use them, but I ask you to at least quote me.
 
-			</article>
-		</section>
-
-        <!-- Copyright -->
-		<footer class="copyright">
-			<ul>
-				<li>Base design: <a href="http://html5up.net">HTML5 UP</a></li>
-				<li>Header: by me</li>
-			</ul>
-		</footer>
+			<!-- Picture content -->
+			<div id="photo-container" style="text-align: center; margin-top: 2em;"></div>
+		</article>
 
 		<!-- Scripts -->
 		<script src="assets/js/photography.js"></script>
-		<script src="assets/js/jquery.min.js"></script>
-		<script src="assets/js/jquery.dropotron.min.js"></script>
-		<script src="assets/js/browser.min.js"></script>
-		<script src="assets/js/breakpoints.min.js"></script>
-		<script src="assets/js/util.js"></script>
-		<script src="assets/js/main.js"></script>
 	</body>
 </html>
