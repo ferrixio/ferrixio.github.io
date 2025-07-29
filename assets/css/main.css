@@ -2,6 +2,8 @@
 body {
 	height: inherit;
 	margin: 0;
+	font-family: 'Verdana';
+	color: #313438;
 }
 
 html {
@@ -20,20 +22,17 @@ body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 }
 
 	body, input, textarea, select, figcaption {
-		font-family: 'Verdana';
-		color: #313438;
 		font-size: medium;
 		line-height: 1.5em;
 	}
 
 	h1, h2, h3, h4, h5, h6, title {
-		color: #313438;
 		margin-top: 2em;
 	}
 
 	a {
 		text-decoration: underline;
-		color: rgb(131, 40, 255);
+		color: hsl(265, 100%, 40%);
 	}
 
 	em, i {
@@ -52,8 +51,8 @@ body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 /* homepage */
 body.homepage {
 	height: inherit;
-	background: url("images/rosa.webp");
-	background-size: cover;
+	/* background: rgb(0, 137, 137); */
+	background:linear-gradient(140deg,hsl(240, 100%, 25%),hsl(175, 72%, 50%));
 	text-align: center;
 	justify-content: center;
 	display: flex;
@@ -75,7 +74,8 @@ header {
 	text-align: center;
 	display: flex;
 	flex-direction: column;
-	background: url("images/rosa.webp");
+	/* background:linear-gradient(90deg,navy,#1084d0); */
+	background:linear-gradient(140deg,hsl(240, 100%, 25%),hsl(175, 72%, 50%));
 	background-position: 100% 50%;
 	background-size: cover;
 }
@@ -134,12 +134,6 @@ div.polaroid {
 
 	div.polaroid a {
 		text-decoration: none;
-	}
-
-	/* ehi, questo non cambia figcaption!!!*/
-	div.caption {
-		font-size: 16px;
-		font-weight: bold;
 		color: #333;
 	}
 
@@ -199,123 +193,62 @@ ul.actions {
 
 
 /* Buttons */
-
-	.button i {
-		margin-left: auto;
-		display: flex;
-	}
-
-	input[type="button"],
-	input[type="submit"],
-	input[type="reset"],
-	button,
-	.button {
-		-moz-transition: all .25s ease-in-out;
-		-webkit-transition: all .25s ease-in-out;
-		-ms-transition: all .25s ease-in-out;
+	button {
 		transition: all .25s ease-in-out;
-		display: inline-flex;
-		align-items: center;
-		justify-content: space-between;
-		font-weight: 700;
-		letter-spacing: 0.1rem;
+		background: hsl(14, 70%, 56%) url("images/overlay.png");
+        background-image: linear-gradient(20deg, rgb(255, 217, 0) 0%, rgba(255, 255, 255, 0.004) 100%);
+		border: none;
+		border-radius: 15px;
+		box-shadow: 1px 3px 0rem 0rem rgba(5,5,5,0.5);
+		/* box-shadow:inset -1px -1px #0a0a0a,inset 1px 1px #fff,inset -2px -2px grey,inset 2px 2px #dfdfdf; */
+		box-sizing: border-box;
+		font-size: medium;
+		color: hsl(240, 50%, 25%);
+		font-weight: 500;
 		text-decoration: none;
-		border-radius: 1.25rem;
-		cursor: pointer;
+		text-align: center;
+		letter-spacing: 0.1rem;
+		line-height: 2em;
+		width: fit-content;
+		min-height: fit-content;
 		padding: 0 2em 0 2em;
-		font-size: 1em;
-		min-width: 10em;
-		height: auto;
-		max-width: 15em;
-		line-height: 3em;
-		box-shadow: 0.1rem 0.3rem 0rem 0rem rgba(5,5,5,0.5);
-		color: rgba(255, 255, 255);;
+		cursor: pointer;
 	}
 
-    input[type="button"].normal,
-    input[type="submit"].normal,
-    input[type="reset"].normal,
-    button.normal,
-    .button.normal {
-        background: hsl(25, 90%, 55%) url("images/overlay.png");
-        background-image: linear-gradient(20deg, rgba(250, 250, 20, 0.6) 0%, rgba(255, 255, 255, 0.004) 100%);
-        background-position: 0% 0%;
-        background-repeat: repeat;
-        background-size: cover;
-		min-width: 11em;
-    }
-
-        input[type="button"].normal:hover,
-        input[type="submit"].normal:hover,
-        input[type="reset"].normal:hover,
-        button.normal:hover,
-        .button.normal:hover {
-            background-color: hsl(25, 90%, 80%);
+        button:hover {
+            background-color: hsl(14, 70%, 70%);
         }
 
-        input[type="button"].normal:active,
-        input[type="submit"].normal:active,
-        input[type="reset"].normal:active,
-        button.normal:active,
-        .button.normal:active {
-            background-color: hsl(25, 90%, 70%);
+        button:active {
+            background-color: hsl(14, 70%, 60%);
         }
 
 
-    input[type="button"].instagram,
-    input[type="submit"].instagram,
-    input[type="reset"].instagram,
-    button.instagram,
-    .button.instagram {
+    #instagram {
         background: hsl(324, 82%, 56%) url("images/overlay.png");
-        background-image: linear-gradient(20deg, rgba(127, 111, 222, 0.6) 0%, rgba(255, 255, 255, 0.004) 100%);
-        background-position: 0% 0%;
-        background-repeat: repeat;
-        background-size: cover;
+        background-image: linear-gradient(20deg, rgba(127, 111, 222) 0%, rgba(255, 255, 255, 0.004) 100%);
+		color: white;
     }
 
-        input[type="button"].instagram:hover,
-        input[type="submit"].instagram:hover,
-        input[type="reset"].instagram:hover,
-        button.instagram:hover,
-        .button.instagram:hover {
+        #instagram:hover {
             background-color: hsl(324, 82%, 76%);
         }
 
-        input[type="button"].instagram:active,
-        input[type="submit"].instagram:active,
-        input[type="reset"].instagram:active,
-        button.instagram:active,
-        .button.instagram:active {
+        #instagram:active {
             background-color: hsl(324, 82%, 66%);
         }
 
-    input[type="button"].github,
-    input[type="submit"].github,
-    input[type="reset"].github,
-    button.github,
-    .button.github {
+    #github {
         background: hsl(220, 10%, 20%) url("images/overlay.png");
-        background-image: linear-gradient(20deg, rgba(150, 150, 150, 0.6) 0%, rgba(255, 255, 255, 0.004) 100%);
-        background-position: 0% 0%;
-        background-repeat: repeat;
-        background-size: cover;
+        background-image: linear-gradient(20deg, rgba(150, 150, 150, 0.4) 0%, rgba(255, 255, 255, 0.004) 100%);
+		color: white;
     }
 
-
-        input[type="button"].github:hover,
-        input[type="submit"].github:hover,
-        input[type="reset"].github:hover,
-        button.github:hover,
-        .button.github:hover {
+        #github:hover {
             background-color: hsl(220, 10%, 40%);
         }
 
-        input[type="button"].github:active,
-        input[type="submit"].github:active,
-        input[type="reset"].github:active,
-        button.github:active,
-        .button.github:active {
+        #github:active {
             background-color: hsl(220, 10%, 30%);
         }
 
@@ -350,9 +283,9 @@ article > ul > li {
 	height: auto;
 	width: 20em;
 	background: hsl(0, 0%, 95%);
-    border: 1px solid rgba(0, 0, 0, 0.1);
+	border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 5px;
-    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.53);
 	padding: 1em;
 	display: flex;
 	flex-direction: column;
@@ -380,6 +313,7 @@ article > ul > li {
 		.software a {
 			margin-top: auto;
 			display: block;
+			text-align: center;
 		}
 
 
@@ -431,7 +365,7 @@ article > ul > li {
 		border-radius: 0.75em;
 		background: rgba(150, 150, 150, 0.2);
 		border-radius: 16px;
-		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+		box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 		backdrop-filter: blur(10px);
 		-webkit-backdrop-filter: blur(10px);
 		border: 1px solid rgba(191, 191, 191, 0.6);
@@ -457,10 +391,6 @@ article > ul > li {
 		letter-spacing: 0.25em;
 		padding-top: 1%;
 		padding-bottom: 1%;
-		-moz-transition: all .25s ease-in-out;
-		-webkit-transition: all .25s ease-in-out;
-		-o-transition: all .25s ease-in-out;
-		-ms-transition: all .25s ease-in-out;
 		transition: all .25s ease-in-out;
 		outline: 0;
 	}
@@ -482,6 +412,10 @@ article > ul > li {
 		display: none;
 	}
 
+	article {
+		padding: 0% 15% 5% 15%;
+	}
+
 	/* Desktop */
 	#nav {
 		display: block;
@@ -494,7 +428,7 @@ article > ul > li {
 		border-radius: 0.75em;
 		background: rgba(150, 150, 150, 0.2);
 		border-radius: 16px;
-		box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
+		box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
 		backdrop-filter: blur(5px);
 		-webkit-backdrop-filter: blur(5px);
 		border: 1px solid rgba(191, 191, 191, 0.6);
@@ -533,4 +467,50 @@ article > ul > li {
 		#nav > ul > li.active > a, #nav > ul > li.active > span {
 			color: #fff;
 		}
+}
+
+/* W98 scrollbar */
+::-webkit-scrollbar{
+    width:16px
+}
+
+::-webkit-scrollbar:horizontal{
+    height:17px
+}
+
+::-webkit-scrollbar-corner{
+    background:#dfdfdf
+}
+
+::-webkit-scrollbar-track{
+    background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg width='2' height='2' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M1 0H0v1h1v1h1V1H1V0z' fill='silver'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2 0H1v1H0v1h1V1h1V0z' fill='%23fff'/%3E%3C/svg%3E")
+}
+
+::-webkit-scrollbar-thumb{
+    background-color:#dfdfdf;
+    box-shadow:inset -1px -1px #0a0a0a,inset 1px 1px #fff,inset -2px -2px grey,inset 2px 2px #dfdfdf
+}
+
+::-webkit-scrollbar-button:horizontal:end:increment,
+::-webkit-scrollbar-button:horizontal:start:decrement,
+::-webkit-scrollbar-button:vertical:end:increment,
+::-webkit-scrollbar-button:vertical:start:decrement{display:block}
+::-webkit-scrollbar-button:vertical:start{
+    background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg width='16' height='17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 0H0v16h1V1h14V0z' fill='%23DFDFDF'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2 1H1v14h1V2h12V1H2z' fill='%23fff'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 17H0v-1h15V0h1v17z' fill='%23000'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 1h-1v14H1v1h14V1z' fill='gray'/%3E%3Cpath fill='silver' d='M2 2h12v13H2z'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M8 6H7v1H6v1H5v1H4v1h7V9h-1V8H9V7H8V6z' fill='%23000'/%3E%3C/svg%3E");
+    height:17px
+}
+
+::-webkit-scrollbar-button:vertical:end{
+    background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg width='16' height='17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 0H0v16h1V1h14V0z' fill='%23DFDFDF'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2 1H1v14h1V2h12V1H2z' fill='%23fff'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 17H0v-1h15V0h1v17z' fill='%23000'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 1h-1v14H1v1h14V1z' fill='gray'/%3E%3Cpath fill='silver' d='M2 2h12v13H2z'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M11 6H4v1h1v1h1v1h1v1h1V9h1V8h1V7h1V6z' fill='%23000'/%3E%3C/svg%3E");
+    height:17px
+}
+
+::-webkit-scrollbar-button:horizontal:start{
+    background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg width='16' height='17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 0H0v16h1V1h14V0z' fill='%23DFDFDF'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2 1H1v14h1V2h12V1H2z' fill='%23fff'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 17H0v-1h15V0h1v17z' fill='%23000'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 1h-1v14H1v1h14V1z' fill='gray'/%3E%3Cpath fill='silver' d='M2 2h12v13H2z'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M9 4H8v1H7v1H6v1H5v1h1v1h1v1h1v1h1V4z' fill='%23000'/%3E%3C/svg%3E");
+    width:16px
+}
+
+::-webkit-scrollbar-button:horizontal:end{
+    background-image:url("data:image/svg+xml;charset=utf-8,%3Csvg width='16' height='17' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 0H0v16h1V1h14V0z' fill='%23DFDFDF'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M2 1H1v14h1V2h12V1H2z' fill='%23fff'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M16 17H0v-1h15V0h1v17z' fill='%23000'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M15 1h-1v14H1v1h14V1z' fill='gray'/%3E%3Cpath fill='silver' d='M2 2h12v13H2z'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M7 4H6v7h1v-1h1V9h1V8h1V7H9V6H8V5H7V4z' fill='%23000'/%3E%3C/svg%3E");
+    width:16px
 }
