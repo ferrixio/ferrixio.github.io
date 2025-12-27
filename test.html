@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Test page</title>
+		<meta name="author" content="Samuele Ferri">
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" href="assets/css/main.css"/>
+        <link rel="stylesheet" href="assets/viewerjs/viewer.css">
+	</head>
+	<body>
+        <!-- Header -->
+		<header>
+			<!-- Nav -->
+			<nav>
+				<!-- Mobile format -->
+				<details>
+					<summary>Test</summary>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="research.html">Research</a></li>
+						<li><a href="warehouse.html">Warehouse</a></li>
+						<li><a href="photoblog.html">Portfolio</a></li>
+						<li><a href="about.html">About me</a></li>
+					</ul>
+				</details>
+
+				<!-- Desktop format -->
+				<div id="nav">
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="research.html">Research</a></li>
+						<li><a href="warehouse.html">Warehouse</a></li>
+						<li><a href="photoblog.html">Portfolio</a></li>
+						<li><a href="about.html">About me</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+        <article>
+            <div id="gallery">
+                <ul class="images">
+                    <li><img src="assets/photo/barca-fontana.webp" alt="111" style="width: 10%;"></li>
+                    <li><img src="assets/photo/gattone.webp" alt="22" style="width: 10%;"></li>
+                    <li><img src="assets/photo/barca-fontana.webp" alt="333" style="width: 10%;"></li>
+                </ul>
+            </div>
+		</article>
+
+        <script type="module" src="./assets/viewerjs/viewer.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                new Viewer(document.getElementById('gallery'), {
+                    toolbar: 0,
+                    movable: false,
+                    rotatable: false,
+                    initialCoverage: 1
+                });
+            });
+        </script>
+	</body>
+</html>
