@@ -1,20 +1,21 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>Colored pixel everywhere</title>
+		<title>Test page</title>
 		<meta name="author" content="Samuele Ferri">
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<link rel="stylesheet" href="assets/css/main.css"/>
+        <link rel="stylesheet" href="assets/viewerjs/viewer.css">
 	</head>
 	<body>
-		<!-- Header -->
+        <!-- Header -->
 		<header>
 			<!-- Nav -->
 			<nav>
 				<!-- Mobile format -->
 				<details>
-					<summary>Portfolio</summary>
+					<summary>Test</summary>
 					<ul>
 						<li><a href="index.html">Home</a></li>
 						<li><a href="research.html">Research</a></li>
@@ -37,17 +38,26 @@
 			</nav>
 		</header>
 
-		<article style="text-align: center;">
-			<h2>Photography is the beauty of life captured - Tara Chisolm</h2>
-
-			This is a small collection of the photos I have taken. I hope you like them :)<br>
-			Click on the picture to view it in full screen. You can use them, but I ask you to at least quote me.
-
-			<!-- Picture content -->
-			<div class="gallery"></div>
+        <article>
+            <div id="gallery">
+                <ul class="images">
+                    <li><img src="assets/photo/barca-fontana.webp" alt="111" style="width: 10%;"></li>
+                    <li><img src="assets/photo/gattone.webp" alt="22" style="width: 10%;"></li>
+                    <li><img src="assets/photo/barca-fontana.webp" alt="333" style="width: 10%;"></li>
+                </ul>
+            </div>
 		</article>
 
-		<!-- Scripts -->
-		<script src="assets/js/photography.js"></script>
+        <script type="module" src="./assets/viewerjs/viewer.js"></script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                new Viewer(document.getElementById('gallery'), {
+                    toolbar: 0,
+                    movable: false,
+                    rotatable: false,
+                    initialCoverage: 1
+                });
+            });
+        </script>
 	</body>
 </html>

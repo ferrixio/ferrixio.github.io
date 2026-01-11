@@ -1,5 +1,5 @@
 const imageFolder = './assets/css/photo/';
-const container = document.getElementById('photo-container');
+const container = document.getElementsByClassName('gallery')[0];
 
 const scale = 0.1;
 
@@ -8,31 +8,32 @@ fetch('./assets/js/photo.json')
     .then(response => response.json())
     .then(images => {
         images.forEach(image => {
+
+            // Create <a> element
+            const link = document.createElement('a');
+            link.className = 'polaroid_hyperlink';
+            link.href = imageFolder + image.file;
+            link.target = '_blank';
+
             // Create outer div with class 'polaroid'
             var wrapper = document.createElement('div');
             wrapper.className = 'polaroid';
 
-            // Create <a> element
-            const link = document.createElement('a');
-            link.href = imageFolder + image.file;
-            link.target = '_blank';
-
             const canvas = document.createElement('canvas');
-
-            // Create <figcaption> with two lines
-            const caption = document.createElement('figcaption');
-            caption.innerHTML = `${image.text}<br>${image.date}`;
 
             // Create <img> element
             const img = document.createElement('img');
             img.src = imageFolder + image.file;
-            img.style.objectPosition = `${image.position}`;
+
+            // Create <figcaption> with two lines
+            const caption = document.createElement('figcaption');
+            caption.innerHTML = `${image.text}`;
 
             // Build the structure
-            link.appendChild(canvas);
-            link.appendChild(caption);
-            wrapper.appendChild(link);
-            container.appendChild(wrapper);
+            wrapper.appendChild(canvas);
+            wrapper.appendChild(caption);
+            link.appendChild(wrapper);
+            container.appendChild(link);
 
             // substitute it with canvas and resize it to 10% of original sizes
             img.onload = () => {
