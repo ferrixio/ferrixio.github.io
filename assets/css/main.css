@@ -107,7 +107,8 @@ div.blursquare h4{
 
 /* Photography */
 div.polaroid {
-    display: inline-block;
+    display: inline-flex;
+	flex-direction: column;
     /* background: hsl(42, 75%, 90%); */
     background: hsl(0, 0%, 95%);
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -132,9 +133,17 @@ div.polaroid {
 		border-radius: 5px;
 	}
 
-	div.polaroid a {
+	a.polaroid_hyperlink {
 		text-decoration: none;
 		color: #333;
+	}
+
+	div.polaroid figcaption {
+		flex: 1;
+		justify-content: center;
+		text-align: center;
+		display: flex;
+		align-items: center;
 	}
 
 
