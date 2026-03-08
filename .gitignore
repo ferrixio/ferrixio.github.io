@@ -1,1 +1,5 @@
 /escape-velocity
+*.aux
+*.log
+*.gz
+*.out
