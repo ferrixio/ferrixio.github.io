@@ -1,8 +1,12 @@
+@font-face {
+	font-family: "verdana_loc";
+	src: url('/assets/webfonts/Verdana.ttf');
+}
 
 body {
 	height: inherit;
 	margin: 0;
-	font-family: 'Verdana';
+	font-family: "verdana_loc";
 	color: #313438;
 }
 
@@ -75,9 +79,16 @@ header {
 	display: flex;
 	flex-direction: column;
 	/* background:linear-gradient(90deg,navy,#1084d0); */
-	background:linear-gradient(140deg,hsl(240, 100%, 25%),hsl(175, 72%, 50%));
+	background:linear-gradient(140deg, #000080,#00e4c0, #000080, #4b2caf, #000080);
 	background-position: 100% 50%;
-	background-size: cover;
+	background-size: 400% auto;
+	animation: gradient 120s linear infinite;
+}
+
+@keyframes gradient {
+	0% {background-position: 0% 50%;}
+	50% {background-position: 100% 50%;}
+	100% {background-position: 0% 50%;}
 }
 
 div.blursquare {
@@ -261,6 +272,20 @@ ul.actions {
             background-color: hsl(220, 10%, 30%);
         }
 
+	#pdf {
+        background: hsl(0, 100%, 42%) url("images/overlay.png");
+        background-image: linear-gradient(20deg, rgba(222, 111, 111) 0%, rgba(255, 255, 255, 0.004) 100%);
+		color: white;
+    }
+
+        #pdf:hover {
+            background-color: hsl(0, 100%, 72%);
+        }
+
+        #pdf:active {
+            background-color: hsl(0, 100%, 62%);
+        }
+
 
 article {
 	margin-top: 3em;
@@ -422,7 +447,7 @@ article > ul > li {
 	}
 
 	article {
-		padding: 0% 15% 5% 15%;
+		padding: 0% 20% 5% 20%;
 	}
 
 	/* Desktop */
