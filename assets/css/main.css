@@ -82,7 +82,7 @@ header {
 	background:linear-gradient(140deg, #000080,#00e4c0, #000080, #4b2caf, #000080);
 	background-position: 100% 50%;
 	background-size: 400% auto;
-	animation: gradient 120s linear infinite;
+	animation: gradient 300s linear infinite;
 }
 
 @keyframes gradient {
