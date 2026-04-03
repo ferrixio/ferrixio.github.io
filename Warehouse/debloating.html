@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Windows 11 ?= trash</title>
+		<meta name="author" content="Samuele Ferri">
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" href="../assets/css/main.css"/>
+		<link rel="stylesheet" href="../assets/css/fontawesome-all.min.css">
+	</head>
+	<body>
+		<!-- Header -->
+		<header>
+			<!-- Nav -->
+			<nav>
+				<!-- Mobile format -->
+				<details>
+					<summary>Warehouse</summary>
+					<ul>
+						<li><a href="../index.html">Home</a></li>
+						<li><a href="../research.html">Research</a></li>
+						<li><a href="../warehouse.html">Warehouse</a></li>
+						<li><a href="../photoblog.html">Portfolio</a></li>
+						<li><a href="../about.html">About me</a></li>
+					</ul>
+				</details>
+
+				<!-- Desktop format -->
+				<div id="nav">
+					<ul>
+						<li><a href="../index.html">Home</a></li>
+						<li><a href="../research.html">Research</a></li>
+						<li><a href="../warehouse.html">Warehouse</a></li>
+						<li><a href="../photoblog.html">Portfolio</a></li>
+						<li><a href="../about.html">About me</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+		<article>
+			<h1>Debloating Windows 11</h1>
+			It’s now common knowledge that Windows 11 is full of bloatware that they call "useful services".
+			After years of use, I’ve written a list of these programmes that can be safely uninstalled without affecting the operation of the operating system
+			(in fact, they reduce the load on both the CPU and RAM).<br><br>
+			Each item on the list is accompanied by the relevant PowerShell command to uninstall it (remember to run it as an administrator).
+
+			<ul style="list-style-type:disc">
+				<li>Widget panel (you will free Win+W hotkey)
+					<code>
+						Get-AppxPackage -allusers | Where-Object {$_.Name -like "*WebExperience*"} | Remove-AppxPackage -allusers
+					</code>
+				</li>
+				<li>Phone connection
+					<code>
+						Get-AppxPackage Microsoft.YourPhone | Remove-AppxPackage -allusers
+					</code>
+				</li>
+				<li>Remove host service
+					<code>
+						Get-AppxPackage -allusers *CrossDevice* | Remove-Appxpackage -allusers
+					</code>
+				</li>
+				<li>XBox Gamebar
+					<code>
+						Get-AppxPackage -allusers *Xbox* | Remove-AppxPackage -allusers<br>
+						Get-AppxPackage -allusers *xboxapp* | Remove-AppxPackage -allusers<br>
+						Get-AppxPackage Microsoft.XboxGamingOverlay | Remove-AppxPackage -allusers
+					</code>
+				</li>
+				<li>Copilot & ads from start
+					<code>
+						Get-AppxPackage -allusers *copilot* | Remove-AppxPackage -allusers<br>
+						Get-AppxPackage -allusers *startexperience* | Remove-AppxPackage -allusers
+					</code>
+				</li>
+				<li>Disable Microsoft Recall (the worst software known, so awful that you can't uninstall it)
+					<code>
+						Dism /Online /Disable-Feature /Featurename:Recall
+					</code>
+				</li>
+			</ul>
+			
+			<h2>Other useful commands</h2>
+			<ul style="list-style-type:disc">
+				<li>Restore old right-click menu (requires a reboot of explorer.exe)
+					<code>
+						reg.exe add "HKCU\Software\Classes\CLSID\{86ca1aa0-34aa-4e8b-a509-50c905bae2a2}\InprocServer32" /f /ve
+					</code>
+				</li>
+				<li>Enter BIOS from Powershell
+					<code>
+						Shutdown /r /fw /f /t 0
+					</code>
+				</li>
+			</ul>
+		</article>
+	</body>
+</html>

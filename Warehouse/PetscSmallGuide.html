@@ -1,0 +1,99 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>I forgot my PETSc everywhere!</title>
+		<meta name="author" content="Samuele Ferri">
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" href="../assets/css/main.css"/>
+		<link rel="stylesheet" href="../assets/css/fontawesome-all.min.css">
+	</head>
+	<body>
+		<!-- Header -->
+		<header>
+			<!-- Nav -->
+			<nav>
+				<!-- Mobile format -->
+				<details>
+					<summary>Warehouse</summary>
+					<ul>
+						<li><a href="../index.html">Home</a></li>
+						<li><a href="../research.html">Research</a></li>
+						<li><a href="../warehouse.html">Warehouse</a></li>
+						<li><a href="../photoblog.html">Portfolio</a></li>
+						<li><a href="../about.html">About me</a></li>
+					</ul>
+				</details>
+
+				<!-- Desktop format -->
+				<div id="nav">
+					<ul>
+						<li><a href="../index.html">Home</a></li>
+						<li><a href="../research.html">Research</a></li>
+						<li><a href="../warehouse.html">Warehouse</a></li>
+						<li><a href="../photoblog.html">Portfolio</a></li>
+						<li><a href="../about.html">About me</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+		<article>
+			<h1>Small guide to PETSc</h1>
+			Quoting from their <a href="https://petsc.org/release/" target="_blank">website</a>:<br>
+			"PETSc, the Portable, Extensible Toolkit for Scientific Computation, 
+			pronounced PET-see (/ˈpɛt-siː/), is for the scalable (parallel) solution of scientific applications 
+			modeled by partial differential equations (PDEs).<br>
+			It has bindings for C, Fortran, and Python (via petsc4py).
+			PETSc also contains TAO, the Toolkit for Advanced Optimization, software library. 
+			They support MPI, and GPUs through CUDA, HIP, Kokkos, or OpenCL, as well as hybrid MPI-GPU parallelism; 
+			they also support the NEC-SX Tsubasa Vector Engine."
+			<br><br>
+			It is a library that I'm using in my works during my PhD.
+			Therefore I decided to write a small guide to keep track of some details not well written in their documentation.
+			
+			<h2>Quick installation</h2>
+			You can follow the steps <a href="https://petsc.org/release/install/" target="_blank">here</a>, but if you want a quick guide, here it is:
+			<ol type="1">
+				<li>In a folder of your choice run <samp>git clone -b release https://gitlab.com/petsc/petsc.git petsc</samp></li>
+				<li>Get in the folder with <samp>cd petsc</samp></li>
+				<li>To force a specific version use <samp>git checkout vMAJOR.MINOR.PATCH</samp></li>
+				<li>My personal configuration is
+				<code>
+					./configure --with-cc=gcc --with-cxx=g++ --with-fc=gfortran
+					--download-mpich --download-fblaslapack --download-hdf5 --download-cmake
+					--with-mpi=1 --with-debugging=0
+					--COPTFLAGS=-O3 -march=native -mtune=native -mavx2
+					--CXXOPTFLAGS=-O3 -march=native -mtune=native -mavx2
+					--FOPTFLAGS=-O3 -march=native -mtune=native -mavx2
+				</code>
+				where
+				<ul style="list-style-type:disc">
+					<li>make, gcc, g++, gfortran are required packages to be installed;</li>
+					<li>mpich, fblaslapack, hdf5 and cmake are required packages downloaded during the configuration
+						(hdf5 is optional, use it if you expect to export data in .h5 format);</li>
+					<li>it configures the mpi mode and turns the debug mode off (to gain performance).
+						I fou want to configure PETSc in debug mode use <samp>--with-debugging=1</samp>;</li>
+					<li>C, C++ and Fortran files are always compiled with the optimization label "-O3".
+						If you don't want the compiler to alter the arithmetic, use the label "-O2".</li>
+				</ul>
+				</li>
+			</ol>
+
+			<h2>Custom profiling</h2>
+			If you need to measure the runtime of your program, the <samp>-log_view</samp> option will show you the total CPU time.
+			On the other hand, if you need to measure the time taken by a specific routine, you can use the <samp>PetscLogStage</samp> variable 
+			(full guide <a href="https://petsc.org/release/manual/profiling/#profiling-application-codes" target="_blank">here</a>).<br>
+			This is a generic example:
+			<code>
+				PetscLogStage stagenum;<br>
+				PetscLogStageRegister("Name of the stage", &stagenum);	// Register the stage in the system<br>
+				PetscLogStagePush(stagenum);							// Start the stopwatch<br>
+				/* stage of code here */<br>
+				PetscLogStagePop();										// Stop the stopwatch<br>
+			</code>
+			In this way, <samp>-log_view</samp> will show the CPU of the stopwatch associated to "stagenum".
+
+		</article>
+	</body>
+</html>

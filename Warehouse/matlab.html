@@ -1,0 +1,77 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>Mat-Lab-Please-No</title>
+		<meta name="author" content="Samuele Ferri">
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" href="../assets/css/main.css"/>
+		<link rel="stylesheet" href="../assets/css/fontawesome-all.min.css">
+	</head>
+	<body>
+		<!-- Header -->
+		<header>
+			<!-- Nav -->
+			<nav>
+				<!-- Mobile format -->
+				<details>
+					<summary>Warehouse</summary>
+					<ul>
+						<li><a href="../index.html">Home</a></li>
+						<li><a href="../research.html">Research</a></li>
+						<li><a href="../warehouse.html">Warehouse</a></li>
+						<li><a href="../photoblog.html">Portfolio</a></li>
+						<li><a href="../about.html">About me</a></li>
+					</ul>
+				</details>
+
+				<!-- Desktop format -->
+				<div id="nav">
+					<ul>
+						<li><a href="../index.html">Home</a></li>
+						<li><a href="../research.html">Research</a></li>
+						<li><a href="../warehouse.html">Warehouse</a></li>
+						<li><a href="../photoblog.html">Portfolio</a></li>
+						<li><a href="../about.html">About me</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+		<article>
+			<h1>How to install MATLAB on Linux</h1>
+			Are you also being forced by someone to use Matlab, even though your OS is Linux?
+			Have you also had a right old struggle getting it to work?<br>
+			I might have managed to find a way to make it work (more or less) by piecing together a few answers from various online forums.
+			<br><br>
+			I can’t promise it will work on every distribution, but it certainly does on Ubuntu 25.10 with Wayland.
+
+			<h4>Installation steps</h4>
+			<ol type="1">
+				<li>Download the version of MATLAB you want from the site</li>
+				<li>Run <samp>sudo unzip -X -K  matlab_version_Linux.zip</samp></li>
+				<li>Open terminal in that folder</li>
+				<li>Run this to install:
+					<code>
+						xhost +SI:localuser:root<br>
+						sudo -H ./install<br>
+						xhost -SI:localuser:root
+					</code>
+				</li>
+				<li>Add a link to the application: <samp>/usr/local/MATLAB/version/bin/glnxa64/MATLAB</samp> with option -desktop</li>
+			</ol>
+			The icon for MATLAB application is in <samp>/usr/local/MATLAB/version/bin/glnxa64/cef_resources</samp>.
+			<br>
+			The icon for `.m` files is <samp>/usr/local/MATLAB/version/toolbox/matlab/icons/appcontainer.ico</samp>.
+			
+			<h4>Important note</h4>
+			If MATLAB does not work or crashes during initialization run the following code to reinstall the service-host:
+			<code>
+				wget https://www.mathworks.com/MathWorksServiceHost/glnxa64/ReinstallMathWorksServiceHost<br>
+				chmod +x ReinstallMathWorksServiceHost<br>
+				./ReinstallMathWorksServiceHost<br>
+				chmod -x ReinstallMathWorksServiceHost
+			</code>
+		</article>
+	</body>
+</html>
