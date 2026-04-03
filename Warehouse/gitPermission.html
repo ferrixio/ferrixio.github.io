@@ -1,0 +1,57 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>More like SF-files...</title>
+		<meta name="author" content="Samuele Ferri">
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+		<link rel="stylesheet" href="../assets/css/main.css"/>
+		<link rel="stylesheet" href="../assets/css/fontawesome-all.min.css">
+	</head>
+	<body>
+		<!-- Header -->
+		<header>
+			<!-- Nav -->
+			<nav>
+				<!-- Mobile format -->
+				<details>
+					<summary>Warehouse</summary>
+					<ul>
+						<li><a href="../index.html">Home</a></li>
+						<li><a href="../research.html">Research</a></li>
+						<li><a href="../warehouse.html">Warehouse</a></li>
+						<li><a href="../photoblog.html">Portfolio</a></li>
+						<li><a href="../about.html">About me</a></li>
+					</ul>
+				</details>
+
+				<!-- Desktop format -->
+				<div id="nav">
+					<ul>
+						<li><a href="../index.html">Home</a></li>
+						<li><a href="../research.html">Research</a></li>
+						<li><a href="../warehouse.html">Warehouse</a></li>
+						<li><a href="../photoblog.html">Portfolio</a></li>
+						<li><a href="../about.html">About me</a></li>
+					</ul>
+				</div>
+			</nav>
+		</header>
+
+		<article>
+			<h1>Fix GitLab permission denied with ssh keys</h1>
+			<ol type="1">
+				<li>Check if <samp>ssh</samp> is installed</li>
+				<li>Run <samp>ssh-keygen -t rsa -C "email address"</samp></li>
+				<li>Run <samp>eval $(ssh-agent -s)</samp></li>
+				<li>Run <samp>ssh-add ~/.ssh/'keyname'</samp></li>
+				<li>Run <samp>cat ~/.ssh/'keyname'.pub</samp></li>
+				<li>Copy the output to the clipboard</li>
+				<li>Go to Gitlab > Profile > Settings > SSH Keys</li>
+				<li>Add ney key</li>
+				<li>Copy the copied key into the "Key" field and then "Add key"</li>
+				<li>Test connection with <samp>ssh -T git@gitlab.com</samp></li>
+			</ol>
+		</article>
+	</body>
+</html>
