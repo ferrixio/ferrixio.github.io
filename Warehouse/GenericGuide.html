@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 	<head>
-		<title>More like SF-files...</title>
+		<title>Yes</title>
 		<meta name="author" content="Samuele Ferri">
 		<meta charset="utf-8"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -39,7 +39,26 @@
 		</header>
 
 		<article>
-			<h1>Fix GitLab permission denied with ssh keys</h1>
+			<h1>Generic guide to everything</h1>
+			What would you like to expect from this page? This is a simple list of commands, tweaks and shortcuts to stuff I keep.
+			
+			<h2>Old Google search</h2>
+			If you are like me and want to get rid of Google's AI overview after every search, you can avoid writing "-ai" everytime by changing the 
+			default search engine to
+			<code>http://google.com/search?udm=14&q=%s</code>
+			This will set the search results to the "Web" tab, excluding all ai-focused results.
+
+
+			<h2>Set fingerprint in terminal for sudo</h2>
+			If you want to enable the fingerprint to approve sudo requests in terminal, you simply run
+			<ol type="1">
+				<li><samp>fprintd-enroll</samp> to activate the fingerprint reader (it is already active if you have set up the fingerprint for unlocking the pc);</li>
+				<li><samp>sudo pam-auth-update</samp> and select "fingerprint" in the list of options;</li>
+				<li>test it with a generic sudo-command.</li>
+			</ol>
+
+
+			<h2>Fix GitLab permission denied with ssh keys</h2>
 			<ol type="1">
 				<li>Check if <samp>ssh</samp> is installed</li>
 				<li>Run <samp>ssh-keygen -t rsa -C "email address"</samp></li>
