@@ -73,7 +73,7 @@
 					<li>mpich, fblaslapack, hdf5 and cmake are required packages downloaded during the configuration
 						(hdf5 is optional, use it if you expect to export data in .h5 format);</li>
 					<li>it configures the mpi mode and turns the debug mode off (to gain performance).
-						I fou want to configure PETSc in debug mode use <samp>--with-debugging=1</samp>;</li>
+						If you want to configure PETSc in debug mode use <samp>--with-debugging=1</samp>;</li>
 					<li>C, C++ and Fortran files are always compiled with the optimization label "-O3".
 						If you don't want the compiler to alter the arithmetic, use the label "-O2".</li>
 				</ul>
@@ -94,6 +94,10 @@
 			</code>
 			In this way, <samp>-log_view</samp> will show the CPU of the stopwatch associated to "stagenum".
 
+			<h2>More than one SNES on one DM</h2>
+			This is not an issue, this is done by design. If you want to use two nonlinear solvers (SNES) over one single grid (DM)
+			you should expect a weird behavior starting from the second SNES. Unfortunately, the only way to fix this is to bind
+			each SNES to a copy of the original DM.
 		</article>
 	</body>
 </html>
