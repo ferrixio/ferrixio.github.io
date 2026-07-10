@@ -1,0 +1,32 @@
+[
+    {
+        "id":"blocking2025",
+        "type":"article",
+        "title":"Blocking structures, approximation, and preconditioning",
+        "author":"Barakitis, N. and Donatelli, M. and Ferri, S. and Loi, V. and Serra-Capizzano, S. and Sormani, R. L.",
+        "journal":"Numerical Algorithms",
+        "year":"2025",
+        "volume":"100",
+        "pages":"1893--1927",
+        "doi":"10.1007/s11075-025-02157-y",
+        "url":"https://doi.org/10.1007/s11075-025-02157-y"
+    },
+    {
+        "id":"stokes2026",
+        "type":"preprint",
+        "title":"Spectral analysis of the stiffness matrix sequence in the approximated Stokes equation",
+        "author":"Ferri, S. and Giraudo, C. and Loi, V. and Kuchta, M. and Serra-Capizzano, S.",
+        "year":"2026",
+        "doi":"arxiv:2510.25252",
+        "url":"https://doi.org/10.48550/arXiv.2510.25252"
+    },
+    {
+        "id":"erosion2026",
+        "type":"preprint",
+        "title":"Dissolution of carbonate stones caused by CO2 pollutant: an erosion model",
+        "author":"Braun, E. C. and Bretti, G. and Ferri, S. and Santarelli, M. L. and Semplice, M.",
+        "year":"2026",
+        "doi":"arxiv:2603.29696",
+        "url":"https://doi.org/10.48550/arXiv.2603.29696"
+    }
+]
