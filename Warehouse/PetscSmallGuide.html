@@ -69,7 +69,7 @@
 				</code>
 				where
 				<ul style="list-style-type:disc">
-					<li>make, gcc, g++, gfortran are required packages to be installed;</li>
+					<li><b>make, gcc, g++, gfortran, gawk</b> are required packages to be already installed before configuration;</li>
 					<li>mpich, fblaslapack, hdf5 and cmake are required packages downloaded during the configuration
 						(hdf5 is optional, use it if you expect to export data in .h5 format);</li>
 					<li>it configures the mpi mode and turns the debug mode off (to gain performance).
@@ -79,6 +79,10 @@
 				</ul>
 				</li>
 			</ol>
+
+			<h2>Eigen support</h2>
+			If you need to use the Eigen-C++ library you can simply unpack them via git somewhere and then add their path in the Makefile:
+			<code>CXXFLAGS = -g3 -I/path-to-eigen</code>
 
 			<h2>Custom profiling</h2>
 			If you need to measure the runtime of your program, the <samp>-log_view</samp> option will show you the total CPU time.
