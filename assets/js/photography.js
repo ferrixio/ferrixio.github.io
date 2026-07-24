@@ -3,8 +3,7 @@ const container = document.getElementsByClassName('gallery')[0];
 
 const scale = 0.1;
 
-// fetch('https://ferrixio.github.io/assets/js/photo.json')
-fetch('./assets/js/photo.json')
+fetch('./assets/json/photo.json')
     .then(response => response.json())
     .then(images => {
         images.forEach(image => {

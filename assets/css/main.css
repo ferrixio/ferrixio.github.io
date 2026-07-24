@@ -68,6 +68,7 @@ body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 		margin-top: 16px;
 		display: block;
 		white-space: nowrap;
+		text-wrap: initial;
 	}
 
 	samp {
@@ -312,6 +313,20 @@ ul.actions {
 
         #pdf:active {
             background-color: hsl(0, 100%, 62%);
+        }
+
+	#gscholar {
+        background: rgb(51, 92, 255) url("images/overlay.png");
+        background-image: linear-gradient(20deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.004) 100%);
+		color: white;
+    }
+
+        #github:hover {
+            background-color: hsl(228, 100%, 80%);
+        }
+
+        #github:active {
+            background-color: hsl(228, 100%, 70%);
         }
 
 
