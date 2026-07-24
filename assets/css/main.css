@@ -68,6 +68,7 @@ body.is-preload *, body.is-preload *:before, body.is-preload *:after {
 		margin-top: 16px;
 		display: block;
 		white-space: nowrap;
+		text-wrap: initial;
 	}
 
 	samp {
