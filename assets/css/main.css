@@ -214,7 +214,8 @@ ul.actions {
 	/* Separator for random stuff*/
 	ul.random {
 		list-style: none;
-		padding-left: 0;
+		padding-left: 10%;
+		padding-right: 10%;
 	}
 
 		ul.random li {
