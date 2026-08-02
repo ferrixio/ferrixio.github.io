@@ -56,7 +56,10 @@
 				<li><samp>sudo pam-auth-update</samp> and select "fingerprint" in the list of options;</li>
 				<li>test it with a generic sudo-command.</li>
 			</ol>
-
+			<fieldset class="warning">
+				<legend>warning</legend>
+				It looks like this will slow the first login after a boot, because pam is expecting the fingerprint in addition to the password.
+			</fieldset>
 
 			<h2>Fix GitLab permission denied with ssh keys</h2>
 			<ol type="1">
