@@ -1,4 +1,4 @@
-const imageFolder = './assets/css/photo/';
+const imageFolder = './assets/photo/';
 const container = document.getElementsByClassName('gallery')[0];
 
 const scale = 0.1;
