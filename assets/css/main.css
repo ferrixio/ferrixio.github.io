@@ -1,6 +1,6 @@
 @font-face {
 	font-family: "verdana_loc";
-	src: url('/assets/webfonts/Verdana.ttf');
+	src: url('/assets/css/Verdana.ttf');
 }
 
 body {
@@ -134,15 +134,13 @@ div.blursquare {
 	justify-content: center;
 }
 
-div.blursquare h1{
-	color: white;
-	text-transform: uppercase;
-}
+	div.blursquare h1{
+		text-transform: uppercase;
+	}
 
-div.blursquare h4{
-	color: white;
-	font-style: italic;
-}
+	div.blursquare h4{
+		font-style: italic;
+	}
 
 
 /* Photography */
@@ -187,6 +185,54 @@ div.polaroid {
 	}
 
 
+fieldset {
+	width: auto;
+	padding: 16px;
+	overflow: auto;
+	line-height: 1.45;
+	border-radius: 10px;
+	margin-bottom: 16px;
+	margin-top: 16px;
+	display: block;
+	white-space: nowrap;
+	text-wrap: initial;
+	border: 2px outset;
+}
+
+	fieldset.warning {
+		background-color: #faf4f0;
+		border-color: orangered;
+	}
+
+	fieldset.warning legend {
+		color: orangered;
+	}
+
+	fieldset.note {
+		background-color: #f3f0fa;
+		border-color: slateblue;
+	}
+
+	fieldset.note legend {
+		color: slateblue;
+	}
+
+	fieldset code {
+		background-color: #f1f3f6;
+		border: 1px solid darkgrey;
+	}
+
+	fieldset legend {
+		text-transform: uppercase;
+		font-weight: bold;
+		padding-left: 10px;
+		padding-right: 10px;
+		border-radius: inherit;
+		backdrop-filter: blur(8px);
+		border-color: inherit;
+	}
+
+
 /* Ul as action */
 ul.actions {
 	list-style: none;
@@ -214,7 +260,8 @@ ul.actions {
 	/* Separator for random stuff*/
 	ul.random {
 		list-style: none;
-		padding-left: 0;
+		padding-left: 10%;
+		padding-right: 10%;
 	}
 
 		ul.random li {
