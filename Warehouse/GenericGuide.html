@@ -74,6 +74,39 @@
 				<li>Copy the copied key into the "Key" field and then "Add key"</li>
 				<li>Test connection with <samp>ssh -T git@gitlab.com</samp></li>
 			</ol>
+
+			<h2>Mount .vhdx files on Linux</h2>
+			If you would like to read Windows virtual disks from Linux, for example WSL's storage, here are the steps:
+			<ol type="1">
+				<li>Install <samp>qemu-nbd</samp> (Network Block Device)
+					<ul style="list-style-type: disc;">
+						<li><b>Ubuntu</b>: <samp>sudo apt install qemu-utils</samp></li>
+						<li><b>Fedora</b>: <samp>sudo dnf install qemu-img</samp></li>
+						<li><b>Arch</b>: <samp>sudo pacman -S qemu-base</samp></li>
+					</ul>
+				</li>
+
+				<li>Enable nbd in kernel with <samp>sudo modprobe nbd max_part=8</samp></li>
+				<li>Attach the <samp>.vhdx</samp> file to nbd slot with <samp>sudo qemu-nbd --connect=/dev/nbd0 /path/to/file.vhdx</samp></li>
+				<li>Mount the partition in read-only mode:
+					<code>
+						sudo mkdir -p /mnt/vhdx<br>
+						sudo mount -o ro /dev/nbd0p1 /mnt/vhdx
+					</code>
+				</li>
+			</ol>
+			To clean everything up you have to:
+			<ol type="1">
+				<li>Unmount with <samp>sudo umount /mnt/vhdx</samp></li>
+				<li>Disconnect with <samp>sudo qemu-nbd --disconnect /dev/nbd0</samp></li>
+				<li>(Optional) Remove kernel module with <samp>sudo rmmod nbd</samp></li>
+			</ol>
+
+			<fieldset class="note">
+				<legend>Note</legend>
+				If standard unmounting does not work, you can add the flag "<samp>-l</samp>" to step 1 and call "<samp>sudo pkill -9 qemu-nbd</samp>" before step 2.
+			</fieldset>
+
 		</article>
 	</body>
 </html>
