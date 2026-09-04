@@ -266,6 +266,16 @@ fieldset legend {
 		background-color: #f1f3f6;
 	}
 
+
+#holder {
+	display: flex;
+	justify-content: center;
+	margin-top: 2em;
+	gap: 1em;
+	flex-wrap: wrap;
+}
+
+
 /* Software card */
 .software {
     max-width: 20em; /* Prevents overflow */
