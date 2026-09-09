@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>LaTex my beloved</title>
+	</head>
+	<body>
+		<article>
+			<h1>LaTex utilities</h1>
+            Below are some custom commands and package settings that are commonly used (and useful) when writing articles (on numerical analysis).
+
+            <h2>Custom commands</h2>
+            <ul style="list-style-type:square; padding-left: 10%;">
+                <li><samp>\newcommand{\set}[1]{\left\lbrace #1 \right\rbrace }</samp></li>
+                <li><samp>\newcommand{\abs}[1]{\left|#1\right|}</samp></li>
+                <li><samp>\newcommand{\norm}[1]{\left\|#1\right\|}</samp></li>
+                <li><samp>\newcommand{\quoted}[1]{\textquotedblleft#1"}</samp></li>
+                <li><samp>\renewcommand{\arraystretch}{1.2}</samp></li>
+            </ul>
+
+            <h2>Common packages</h2>
+            <ul style="list-style-type:square; padding-left: 10%;">
+                <li><samp>\usepackage[margin=3cm]{geometry}</samp></li>
+                <li><samp>\usepackage{amsmath, amssymb, amsthm}</samp></li>
+                <li><samp>\usepackage{mathtools, authblk, booktabs, xcolor}</samp></li>
+                <li><samp>\usepackage[bookmarks]{hyperref}</samp> with <samp>\hypersetup{colorlinks = true,linkcolor = blue,citecolor = red}</samp></li>
+            </ul>
+
+		</article>
+		<script src="/assets/js/headerNav.js"></script>
+	</body>
+</html>
