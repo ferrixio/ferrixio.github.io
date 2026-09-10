@@ -20,7 +20,7 @@ body, input, textarea, select, figcaption {
 }
 
 h1, h2, h3, h4, h5, h6, title {
-	margin-top: 2em;
+	margin-top: 1em;
 	line-height: 1.3;
 }
 
