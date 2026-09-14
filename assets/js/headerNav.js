@@ -28,15 +28,3 @@ mainHeader.innerHTML = `
 `;
 
 document.body.prepend(mainHeader);
-
-
-// Common html-head
-const sharedHead = `
-    <meta name="author" content="Samuele Ferri">
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <link rel="stylesheet" href="/assets/css/main.css"/>
-    <link rel="icon" type="image/svg+xml" href="/assets/css/images/favicon.svg">
-`;
-
-document.head.insertAdjacentHTML('afterbegin',sharedHead);
