@@ -14,93 +14,35 @@ html {
 	height: 100%;
 }
 
-body.is-preload *, body.is-preload *:before, body.is-preload *:after {
-	-moz-animation: none !important;
-	-webkit-animation: none !important;
-	-ms-animation: none !important;
-	animation: none !important;
-	-moz-transition: none !important;
-	-webkit-transition: none !important;
-	-ms-transition: none !important;
-	transition: none !important;
+body, input, textarea, select, figcaption {
+	font-size: medium;
+	line-height: 1.5em;
 }
 
-	body, input, textarea, select, figcaption {
-		font-size: medium;
-		line-height: 1.5em;
-	}
-
-	h1, h2, h3, h4, h5, h6, title {
-		margin-top: 2em;
-		line-height: 1.3;
-	}
-
-	a {
-		text-decoration: underline;
-		color: hsl(265, 100%, 40%);
-	}
-
-	em, i {
-		font-style: italic;
-	}
-
-	ul {
-		list-style: none;
-	}
-
-	*, *:before, *:after {
-		box-sizing: inherit;
-	}
-
-	time {
-		color: #8a8a8a;
-	}
-
-	code {
-		width: auto;
-		font-size: large;
-		background-color: #f1f3f6;
-		padding: 16px;
-		overflow: auto;
-		line-height: 1.45;
-		border-radius: 10px;
-		margin-bottom: 16px;
-		margin-top: 16px;
-		display: block;
-		white-space: nowrap;
-		text-wrap: initial;
-	}
-
-	samp {
-		font-size: large;
-		background-color: #f1f3f6;
-		border-radius: 6px;
-		/* color:hsl(15, 100%, 50%); */
-		padding-left: 5px;
-		padding-right: 5px;
-		word-break: break-all;
-	}
-
-/* homepage */
-body.homepage {
-	height: inherit;
-	/* background: rgb(0, 137, 137); */
-	background:linear-gradient(140deg,hsl(240, 100%, 25%),hsl(175, 72%, 50%));
-	text-align: center;
-	justify-content: center;
-	display: flex;
+h1, h2, h3, h4, h5, h6, title {
+	margin-top: 1em;
+	line-height: 1.3;
 }
 
-.container {
-	text-align: center;
-	justify-content: center;
-	display: block;
-	flex-direction: column;
+a {
+	text-decoration: underline;
+	color: hsl(265, 100%, 40%);
 }
 
-nav {
-	margin-top: 2em;
-	margin-bottom: 2em;
+em, i {
+	font-style: italic;
+}
+
+ul {
+	list-style: none;
+}
+
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+
+time {
+	color: #8a8a8a;
 }
 
 header {
@@ -120,19 +62,49 @@ header {
 	100% {background-position: 0% 50%;}
 }
 
-div.blursquare {
-	background: rgb(0, 0, 0, 0.6);
-	backdrop-filter: blur(10px);
-	margin: auto;
-	width: 90%;
-	padding: 0 0 5% 0;
-	border-radius: 2em;
-	border: 2px dashed;
-	color: white;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
+nav {
+	margin-top: 2em;
+	margin-bottom: 2em;
 }
+
+article {
+	margin-top: 3em;
+	padding: 0% 15% 5% 15%;
+}
+
+article > h1, article > h2, article > h3 {
+	text-align: center;
+}
+
+article > ul > li {
+	margin-top: 0.5em;
+}
+
+
+/* homepage macro */
+body.homepage {
+	height: inherit;
+	/* background: rgb(0, 137, 137); */
+	background:linear-gradient(140deg,hsl(240, 100%, 25%),hsl(175, 72%, 50%));
+	text-align: center;
+	justify-content: center;
+	display: flex;
+}
+
+	/* Main textbox */
+	div.blursquare {
+		background: rgb(0, 0, 0, 0.6);
+		backdrop-filter: blur(10px);
+		margin: auto;
+		width: 90%;
+		padding: 0 0 5% 0;
+		border-radius: 2em;
+		border: 2px dashed;
+		color: white;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
 
 	div.blursquare h1{
 		text-transform: uppercase;
@@ -143,7 +115,7 @@ div.blursquare {
 	}
 
 
-/* Photography */
+/* Photography macro */
 div.polaroid {
     display: inline-flex;
 	flex-direction: column;
@@ -185,6 +157,33 @@ div.polaroid {
 	}
 
 
+/* Coding macro */
+code {
+	width: auto;
+	font-size: large;
+	background-color: #f1f3f6;
+	padding: 16px;
+	overflow: auto;
+	line-height: 1.45;
+	border-radius: 10px;
+	margin-bottom: 16px;
+	margin-top: 16px;
+	display: block;
+	white-space: nowrap;
+	text-wrap: initial;
+}
+
+samp {
+	font-size: large;
+	background-color: #f1f3f6;
+	border-radius: 6px;
+	/* color:hsl(15, 100%, 50%); */
+	padding-left: 5px;
+	padding-right: 5px;
+	word-break: break-all;
+}
+
+/* Info cards as fieldset */
 fieldset {
 	width: auto;
 	padding: 16px;
@@ -197,6 +196,21 @@ fieldset {
 	white-space: nowrap;
 	text-wrap: initial;
 	border: 2px outset;
+}
+
+fieldset code {
+	background-color: #f1f3f6;
+	border: 1px solid darkgrey;
+}
+
+fieldset legend {
+	text-transform: uppercase;
+	font-weight: bold;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: inherit;
+	backdrop-filter: blur(8px);
+	border-color: inherit;
 }
 
 	fieldset.warning {
@@ -217,178 +231,40 @@ fieldset {
 		color: slateblue;
 	}
 
-	fieldset code {
+/* Collapsible box */
+.collapsible {
+	background: hsl(0, 0%, 100%);
+	cursor: pointer;
+	padding: 15px;
+	width: 100%;
+	border: none;
+	box-shadow: none;
+	text-align: left;
+	border-radius: 0;
+	color: black;
+}
+
+	.active, .collapsible:hover {
+		background-color: hsl(0, 50%, 97%);
+	}
+
+	.collapsible:after {
+		content: '\2B9F';
+		float: left;
+		margin-left: 5px;
+	}
+
+	.active:after {
+		content: "\2B9D";
+	}
+
+	.content {
+		padding: 0 15px;
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.2s ease-out;
 		background-color: #f1f3f6;
-		border: 1px solid darkgrey;
 	}
-
-	fieldset legend {
-		text-transform: uppercase;
-		font-weight: bold;
-		padding-left: 10px;
-		padding-right: 10px;
-		border-radius: inherit;
-		backdrop-filter: blur(8px);
-		border-color: inherit;
-	}
-
-
-/* Ul as action */
-ul.actions {
-	list-style: none;
-	padding-left: 0;
-}
-
-	ul.actions li {
-		display: inline-block;
-		margin: 0 0.75em 0 0.75em;
-		padding-left: 0;
-	}
-
-		ul.actions li:first-child {
-			margin-left: 0;
-		}
-
-		ul.actions li:last-child {
-			margin-right: 0;
-		}
-
-	ul.actions.special {
-		text-align: center;
-	}
-
-	/* Separator for random stuff*/
-	ul.random {
-		list-style: none;
-		padding-left: 10%;
-		padding-right: 10%;
-	}
-
-		ul.random li {
-			border-top: solid 1px rgb(128, 128, 128, 0.25);
-			padding: 10px 0 10px 0;
-		}
-
-			ul.random li:first-child {
-				border-top: 0;
-				padding-top: 0;
-				margin-top: 0;
-				padding-bottom: 10px;
-			}
-
-			ul.random p {
-				margin: 0;
-			}
-
-			ul.random h3 {
-				font-size: 1em;
-				font-weight: 600;
-				letter-spacing: 0.05em;
-				margin: 0;
-			}
-
-
-/* Buttons */
-	button {
-		transition: all .25s ease-in-out;
-		background: hsl(14, 70%, 56%) url("images/overlay.png");
-        background-image: linear-gradient(20deg, rgb(255, 217, 0) 0%, rgba(255, 255, 255, 0.004) 100%);
-		border: none;
-		border-radius: 15px;
-		box-shadow: 1px 3px 0rem 0rem rgba(5,5,5,0.5);
-		/* box-shadow:inset -1px -1px #0a0a0a,inset 1px 1px #fff,inset -2px -2px grey,inset 2px 2px #dfdfdf; */
-		box-sizing: border-box;
-		font-size: medium;
-		color: hsl(240, 50%, 25%);
-		font-weight: 500;
-		text-decoration: none;
-		text-align: center;
-		letter-spacing: 0.1rem;
-		line-height: 2em;
-		width: fit-content;
-		min-height: fit-content;
-		padding: 0 2em 0 2em;
-		cursor: pointer;
-	}
-
-        button:hover {
-            background-color: hsl(14, 70%, 70%);
-        }
-
-        button:active {
-            background-color: hsl(14, 70%, 60%);
-        }
-
-
-    #instagram {
-        background: hsl(324, 82%, 56%) url("images/overlay.png");
-        background-image: linear-gradient(20deg, rgba(127, 111, 222) 0%, rgba(255, 255, 255, 0.004) 100%);
-		color: white;
-    }
-
-        #instagram:hover {
-            background-color: hsl(324, 82%, 76%);
-        }
-
-        #instagram:active {
-            background-color: hsl(324, 82%, 66%);
-        }
-
-    #github {
-        background: hsl(220, 10%, 20%) url("images/overlay.png");
-        background-image: linear-gradient(20deg, rgba(150, 150, 150, 0.4) 0%, rgba(255, 255, 255, 0.004) 100%);
-		color: white;
-    }
-
-        #github:hover {
-            background-color: hsl(220, 10%, 40%);
-        }
-
-        #github:active {
-            background-color: hsl(220, 10%, 30%);
-        }
-
-	#pdf {
-        background: hsl(0, 100%, 42%) url("images/overlay.png");
-        background-image: linear-gradient(20deg, rgba(222, 111, 111) 0%, rgba(255, 255, 255, 0.004) 100%);
-		color: white;
-    }
-
-        #pdf:hover {
-            background-color: hsl(0, 100%, 72%);
-        }
-
-        #pdf:active {
-            background-color: hsl(0, 100%, 62%);
-        }
-
-	#gscholar {
-        background: rgb(51, 92, 255) url("images/overlay.png");
-        background-image: linear-gradient(20deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.004) 100%);
-		color: white;
-    }
-
-        #github:hover {
-            background-color: hsl(228, 100%, 80%);
-        }
-
-        #github:active {
-            background-color: hsl(228, 100%, 70%);
-        }
-
-
-article {
-	margin-top: 3em;
-	padding: 0% 15% 5% 15%;
-}
-
-article > h1, article > h2, article > h3 {
-	text-align: center;
-}
-
-article > ul > li {
-	margin-top: 0.5em;
-}
 
 
 #holder {
@@ -398,6 +274,7 @@ article > ul > li {
 	gap: 1em;
 	flex-wrap: wrap;
 }
+
 
 /* Software card */
 .software {
@@ -439,6 +316,151 @@ article > ul > li {
 		}
 
 
+/* Special UL for button list*/
+ul.actions {
+	list-style: none;
+	padding-left: 0;
+}
+
+	ul.actions li {
+		display: inline-block;
+		margin: 0 0.75em 0 0.75em;
+		padding-left: 0;
+	}
+
+		ul.actions li:first-child {
+			margin-left: 0;
+		}
+
+		ul.actions li:last-child {
+			margin-right: 0;
+		}
+
+	ul.actions.special {
+		text-align: center;
+	}
+
+/* Special UL as separator in random stuff */
+ul.random {
+	list-style: none;
+	padding-left: 10%;
+	padding-right: 10%;
+}
+
+	ul.random li {
+		border-top: solid 1px rgb(128, 128, 128, 0.25);
+		padding: 10px 0 10px 0;
+	}
+
+		ul.random li:first-child {
+			border-top: 0;
+			padding-top: 0;
+			margin-top: 0;
+			padding-bottom: 10px;
+		}
+
+		ul.random p {
+			margin: 0;
+		}
+
+		ul.random h3 {
+			font-size: 1em;
+			font-weight: 600;
+			letter-spacing: 0.05em;
+			margin: 0;
+		}
+
+
+/* Buttons macro */
+button {
+	transition: all .25s ease-in-out;
+	background: hsl(14, 70%, 56%) url("images/overlay.png");
+	background-image: linear-gradient(20deg, rgb(255, 217, 0) 0%, rgba(255, 255, 255, 0.004) 100%);
+	border: none;
+	border-radius: 10px;
+	box-shadow: 1px 3px 0rem 0rem rgba(5,5,5,0.5);
+	/* box-shadow:inset -1px -1px #0a0a0a,inset 1px 1px #fff,inset -2px -2px grey,inset 2px 2px #dfdfdf; */
+	box-sizing: border-box;
+	font-size: medium;
+	color: hsl(240, 50%, 25%);
+	font-weight: 500;
+	text-decoration: none;
+	text-align: center;
+	letter-spacing: 0.1rem;
+	line-height: 2em;
+	width: fit-content;
+	min-height: fit-content;
+	padding: 0 2em 0 2em;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: hsl(14, 70%, 70%);
+}
+
+button:active {
+	background-color: hsl(14, 70%, 60%);
+}
+
+	#instagram {
+		background: hsl(324, 82%, 56%) url("images/overlay.png");
+		background-image: linear-gradient(20deg, rgba(127, 111, 222) 0%, rgba(255, 255, 255, 0.004) 100%);
+		color: white;
+	}
+
+		#instagram:hover {
+			background-color: hsl(324, 82%, 76%);
+		}
+
+		#instagram:active {
+			background-color: hsl(324, 82%, 66%);
+		}
+
+	#github {
+		background: hsl(220, 10%, 20%) url("images/overlay.png");
+		background-image: linear-gradient(20deg, rgba(150, 150, 150, 0.4) 0%, rgba(255, 255, 255, 0.004) 100%);
+		color: white;
+	}
+
+		#github:hover {
+			background-color: hsl(220, 10%, 40%);
+		}
+
+		#github:active {
+			background-color: hsl(220, 10%, 30%);
+		}
+
+	#pdf {
+		background: hsl(0, 100%, 42%) url("images/overlay.png");
+		background-image: linear-gradient(20deg, rgba(222, 111, 111) 0%, rgba(255, 255, 255, 0.004) 100%);
+		color: white;
+	}
+
+		#pdf:hover {
+			background-color: hsl(0, 100%, 72%);
+		}
+
+		#pdf:active {
+			background-color: hsl(0, 100%, 62%);
+		}
+
+	#gscholar {
+		background: rgb(51, 92, 255) url("images/overlay.png");
+		background-image: linear-gradient(20deg, rgba(255, 255, 255, 0.4) 0%, rgba(255, 255, 255, 0.004) 100%);
+		color: white;
+	}
+
+		#gscholar:hover {
+			background-color: hsl(228, 100%, 80%);
+		}
+
+		#gscholar:active {
+			background-color: hsl(228, 100%, 70%);
+		}
+
+
+
+/* Mobile screen format */
 @media screen and (max-width: 900px) {
 
 	ul.actions {
@@ -532,6 +554,7 @@ article > ul > li {
 }
 
 
+/* Generic desktop format */
 @media screen and (min-width: 900px) {
 
 	/* Mobile */
