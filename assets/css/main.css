@@ -3,6 +3,17 @@
 	src: url('/assets/css/Verdana.ttf');
 }
 
+:root {
+	--matlab-orange: 221, 84, 0;
+	--dnd-red: 255, 35, 42;
+	--win--blue: rgb(5, 133, 231);
+	--win95-green: rgb(0, 128, 128);
+	--sf-green: rgb(62, 146, 67);
+	--vscode-blue: rgb(35, 169, 242);
+	--latex-blue: rgb(63, 66, 237);
+	--latex-purple: 119, 0, 204;
+}
+
 body {
 	height: inherit;
 	margin: 0;
@@ -26,7 +37,7 @@ h1, h2, h3, h4, h5, h6, title {
 
 a {
 	text-decoration: underline;
-	color: hsl(265, 100%, 40%);
+	color: var(--latex-purple);
 }
 
 em, i {
@@ -267,12 +278,28 @@ fieldset legend {
 	}
 
 
-#holder {
+.holder {
 	display: flex;
 	justify-content: center;
 	margin-top: 2em;
 	gap: 1em;
 	flex-wrap: wrap;
+}
+
+
+/* Warehouse items */
+.holder a.witem {
+	width: 80%;
+	height: auto;
+	border: 2px solid rgba(var(--matlab-orange), 0.5);
+    border-radius: 10px;
+    /* box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.53); */
+	padding: 1em;
+	text-decoration: none;
+	font-size: large;
+	color: black;
+	/* background-color:bisque; */
+	background-color: rgba(var(--matlab-orange), 0.2);
 }
 
 
@@ -613,6 +640,16 @@ button:active {
 		#nav > ul > li.active > a, #nav > ul > li.active > span {
 			color: #fff;
 		}
+	
+	.holder a.witem {
+		width: 45%;
+	}
+}
+
+@media screen and (min-width: 900px) and (max-width: 1370px) {
+	.holder a.witem {
+		width: 40%;
+	}
 }
 
 /* W98 scrollbar */
