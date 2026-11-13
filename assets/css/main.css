@@ -4,14 +4,16 @@
 }
 
 :root {
-	--matlab-orange: 221, 84, 0;
-	--dnd-red: 255, 35, 42;
+	--matlab-orange: rgb(221, 84, 0);
+	--dnd-red: rgb(255, 35, 42);
 	--win--blue: rgb(5, 133, 231);
 	--win95-green: rgb(0, 128, 128);
-	--sf-green: rgb(62, 146, 67);
+	--sf-green: rgb(39, 196, 39);
 	--vscode-blue: rgb(35, 169, 242);
 	--latex-blue: rgb(63, 66, 237);
-	--latex-purple: 119, 0, 204;
+	--latex-purple: rgb(119, 0, 204);
+	--white-back: #f1f3f6;
+	--ultramarine: rgb(0, 0, 128);
 }
 
 body {
@@ -61,7 +63,7 @@ header {
 	display: flex;
 	flex-direction: column;
 	/* background:linear-gradient(90deg,navy,#1084d0); */
-	background:linear-gradient(140deg, #000080,#00e4c0, #000080, #4b2caf, #000080);
+	background:linear-gradient(140deg, var(--ultramarine),#00e4c0, var(--ultramarine), #4b2caf, var(--ultramarine));
 	background-position: 100% 50%;
 	background-size: 400% auto;
 	animation: gradient 300s linear infinite;
@@ -96,7 +98,7 @@ article > ul > li {
 body.homepage {
 	height: inherit;
 	/* background: rgb(0, 137, 137); */
-	background:linear-gradient(140deg,hsl(240, 100%, 25%),hsl(175, 72%, 50%));
+	background:linear-gradient(140deg,var(--ultramarine),#24dbcc);
 	text-align: center;
 	justify-content: center;
 	display: flex;
@@ -172,7 +174,7 @@ div.polaroid {
 code {
 	width: auto;
 	font-size: large;
-	background-color: #f1f3f6;
+	background-color: var(--white-back);
 	padding: 16px;
 	overflow: auto;
 	line-height: 1.45;
@@ -186,7 +188,7 @@ code {
 
 samp {
 	font-size: large;
-	background-color: #f1f3f6;
+	background-color: var(--white-back);
 	border-radius: 6px;
 	/* color:hsl(15, 100%, 50%); */
 	padding-left: 5px;
@@ -207,10 +209,11 @@ fieldset {
 	white-space: nowrap;
 	text-wrap: initial;
 	border: 2px outset;
+	background-color: var(--white-back);
 }
 
 fieldset code {
-	background-color: #f1f3f6;
+	background-color: var(--white-back);
 	border: 1px solid darkgrey;
 }
 
@@ -225,7 +228,6 @@ fieldset legend {
 }
 
 	fieldset.warning {
-		background-color: #faf4f0;
 		border-color: orangered;
 	}
 
@@ -234,7 +236,6 @@ fieldset legend {
 	}
 
 	fieldset.note {
-		background-color: #f3f0fa;
 		border-color: slateblue;
 	}
 
@@ -274,7 +275,7 @@ fieldset legend {
 		max-height: 0;
 		overflow: hidden;
 		transition: max-height 0.2s ease-out;
-		background-color: #f1f3f6;
+		background-color: var(--white-back);
 	}
 
 
@@ -291,15 +292,11 @@ fieldset legend {
 .holder a.witem {
 	width: 80%;
 	height: auto;
-	border: 2px solid rgba(var(--matlab-orange), 0.5);
     border-radius: 10px;
-    /* box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.53); */
 	padding: 1em;
 	text-decoration: none;
 	font-size: large;
 	color: black;
-	/* background-color:bisque; */
-	background-color: rgba(var(--matlab-orange), 0.2);
 }
 
 
@@ -308,7 +305,7 @@ fieldset legend {
     max-width: 20em; /* Prevents overflow */
 	height: auto;
 	width: 20em;
-	background: hsl(0, 0%, 95%);
+	background: #f2f2f2;
 	border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 5px;
     box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.53);

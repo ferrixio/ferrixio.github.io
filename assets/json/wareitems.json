@@ -1,0 +1,42 @@
+[
+    {
+        "file":"debloating",
+        "text":"Debloating Windows 11",
+        "R": 5, "G": 133, "B": 231
+    },
+    {
+        "file":"DnD",
+        "text":"Dungeons & Dragons material",
+        "R": 255, "G": 35, "B": 42
+    },
+    {
+        "file":"Fsuite",
+        "text":"Ferrixio's software house",
+        "R": 35, "G": 169, "B": 242
+    },
+    {
+        "file":"GenericGuide",
+        "text":"Generic guide to everything",
+        "R": 39, "G": 197, "B": 39
+    },
+    {
+        "file":"latexUtils",
+        "text":"LaTex custom commands",
+        "R": 119, "G": 0, "B": 204
+    },
+    {
+        "file":"LicensingGuide",
+        "text":"Licensing guide",
+        "R": 39, "G": 197, "B": 39
+    },
+    {
+        "file":"matlab",
+        "text":"Matlab on Linux",
+        "R": 221, "G": 84, "B": 0
+    },
+    {
+        "file":"PetscSmallGuide",
+        "text":"Small guide to PETSc",
+        "R": 35, "G": 169, "B": 242
+    }
+]
