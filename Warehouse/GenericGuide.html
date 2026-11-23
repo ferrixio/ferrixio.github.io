@@ -28,9 +28,10 @@
 				<li><samp>sudo pam-auth-update</samp> and select "fingerprint" in the list of options;</li>
 				<li>test it with a generic sudo-command.</li>
 			</ol>
-			<fieldset class="warning">
-				<legend>warning</legend>
-				It looks like this will slow the first login after a boot, because pam is expecting the fingerprint in addition to the password.
+			<fieldset class="note">
+				<legend>note</legend>
+				If you notice that the first login is slower, it is because pam is waiting for your fingerprint.
+				However, logging into the system with fingerprint is not yet supported (actually you can enable it, but requires a manual override of the pam settings).
 			</fieldset>
 
 			<h2>Fix GitLab permission denied with ssh keys</h2>
@@ -79,6 +80,16 @@
 				If standard unmounting does not work, you can add the flag "<samp>-l</samp>" to step 1 and call "<samp>sudo pkill -9 qemu-nbd</samp>" before step 2.
 			</fieldset>
 
+			<h2>How to connect to eduroam wi-fi from Pixel phone</h2>
+			<ul style="list-style-type:square;">
+				<li><b>EAP method</b>: PEAP</li>
+				<li><b>Phase 2 authentication</b> MSCHAPV2</li>
+				<li><b>CA Certificate</b>: System certificates</li>
+				<li><b>Domain</b>: mail domain without "@"</li>
+				<li><b>Identity</b>: university mail</li>
+				<li><b>Anonymous identity</b>: blank space</li>
+				<li><b>Password</b>: account password</li>
+			</ul>
 		</article>
 
 		<script src="/assets/js/headerNav.js"></script>

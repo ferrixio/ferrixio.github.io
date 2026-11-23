@@ -31,5 +31,14 @@
         "year":"2026",
         "doi":"arxiv:2603.29696",
         "url":"https://doi.org/10.48550/arXiv.2603.29696"
+    },
+    {
+        "id":"karcher2026",
+        "type":"preprint",
+        "title":"Karcher means of structured matrices are asymptotically structured: a study via Schatten estimates for the additive Richardson iteration",
+        "author":"Ferri, S. and Loi, V. and Serra-Capizzano, S. and Tento, G.",
+        "year":"2026",
+        "doi":"arxiv:2611.27335",
+        "url":"https://doi.org/10.48550/arXiv.2611.27335"
     }
 ]
