@@ -28,9 +28,10 @@
 				<li><samp>sudo pam-auth-update</samp> and select "fingerprint" in the list of options;</li>
 				<li>test it with a generic sudo-command.</li>
 			</ol>
-			<fieldset class="warning">
-				<legend>warning</legend>
-				It looks like this will slow the first login after a boot, because pam is expecting the fingerprint in addition to the password.
+			<fieldset class="note">
+				<legend>note</legend>
+				If you notice that the first login is slower, it is because pam is waiting for your fingerprint.
+				However, logging into the system with fingerprint is not yet supported (actually you can enable it, but requires a manual override of the pam settings).
 			</fieldset>
 
 			<h2>Fix GitLab permission denied with ssh keys</h2>
